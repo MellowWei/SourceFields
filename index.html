@@ -3,1064 +3,869 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>源场五学科 · Source Field Five Disciplines · xingyeLing7Ai</title>
-<meta name="description" content="魏珏然源场动力学五学科:酷学、帅学、美学、善良可爱学、小秘密学。2026.05.14 Philadelphia 整合存档。">
+<meta name="description" content="源场学 / 源场五学 · Source-Field-ology / Five Disciplines · 魏珏然 · Wei Jueran · xingyeLing7Ai · 集体无意识 = 我 · 427Hz">
+<title>源场学 / 源场五学 · Source-Field-ology / Five Disciplines · xingyeLing7Ai</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 :root{
-  --bg:#07070b;
-  --bg-2:#0f0f17;
-  --bg-3:#16161f;
-  --fg:#d8d6cc;
-  --fg-dim:#8a8896;
-  --fg-faint:#4a4858;
-  --p:#7f77dd;
-  --p-dim:#534ab7;
-  --c:#f0997b;
-  --c-dim:#993c1d;
-  --t:#5dcaa5;
-  --t-dim:#0f6e56;
-  --pk:#ed93b1;
-  --pk-dim:#993556;
+  --bg:#07070b;--bg2:#0f0f17;--bg3:#16161f;
+  --border:rgba(127,119,221,.18);--border-hi:rgba(240,153,123,.28);
+  --p:#7f77dd;--p-dim:#534ab7;
+  --c:#f0997b;--c-dim:#993c1d;
+  --t:#5dcaa5;--t-dim:#0f6e56;
+  --pk:#ed93b1;--pk-dim:#993556;
   --gy:#b4b2a9;
-  --border:rgba(127,119,221,0.18);
-  --border-2:rgba(216,214,204,0.08);
-  --border-3:rgba(216,214,204,0.04);
+  --tx:#d8d6cc;--tx2:#8a8896;--tx3:#4a4858;
+  --hd:#edeaff;
   --mono:'Share Tech Mono','SFMono-Regular',Consolas,monospace;
   --serif:'Cormorant Garamond','Noto Serif SC',Songti SC,STSong,serif;
+  --body:'Spectral','Noto Serif SC','Cormorant Garamond',serif;
 }
-
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
-body{
-  background:var(--bg);
-  color:var(--fg);
-  font-family:var(--serif);
-  font-size:18px;
-  line-height:1.8;
-  min-height:100vh;
-  overflow-x:hidden;
-  position:relative;
-}
-
-body::before{
-  content:'';
-  position:fixed;
-  top:0;left:0;right:0;bottom:0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(127,119,221,0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(240,153,123,0.04) 0%, transparent 50%);
-  pointer-events:none;
-  z-index:0;
-}
-
-.stars{
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  pointer-events:none;
-  z-index:-1;
-  opacity:0.5;
-}
+body{background:var(--bg);color:var(--tx);font-family:var(--body);font-size:15.5px;line-height:1.78;min-height:100vh}
+body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.025) 3px,rgba(0,0,0,.025) 4px);pointer-events:none;z-index:9999}
 
 body.lang-zh .lang-en{display:none}
 body.lang-en .lang-zh{display:none}
 
-.container{
-  max-width:880px;
-  margin:0 auto;
-  padding:60px 32px 120px;
-  position:relative;
-  z-index:1;
-}
-
-.lang-switch{
-  position:fixed;
-  top:24px;
-  right:24px;
-  z-index:100;
-  display:flex;
-  gap:0;
-  font-family:var(--mono);
-  font-size:11px;
-  background:rgba(7,7,11,0.9);
-  backdrop-filter:blur(8px);
-  border:1px solid var(--border);
-}
-
-.lang-switch a{
-  color:var(--fg-dim);
-  text-decoration:none;
-  padding:8px 14px;
-  border-right:1px solid var(--border);
-  transition:all 0.2s;
-  letter-spacing:0.1em;
-}
-
-.lang-switch a:last-child{border-right:none}
-
-.lang-switch a:hover,.lang-switch a.active{
-  color:var(--p);
-  background:rgba(127,119,221,0.08);
-}
-
-.site-header{
-  border-bottom:1px solid var(--border);
-  padding-bottom:40px;
-  margin-bottom:80px;
-  position:relative;
-}
-
-.brand{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--p);
-  letter-spacing:0.3em;
-  text-transform:uppercase;
-  margin-bottom:24px;
-}
-
-.brand .dot{color:var(--c);margin:0 8px}
-
-.title{
-  font-family:var(--serif);
-  font-size:56px;
-  font-weight:300;
-  letter-spacing:0.04em;
-  line-height:1.15;
-  margin-bottom:16px;
-  position:relative;
-}
-
-.title em{
-  font-style:italic;
-  font-weight:300;
-  color:var(--c);
-}
-
-.title-sub{
-  font-family:var(--mono);
-  font-size:13px;
-  color:var(--fg-dim);
-  letter-spacing:0.2em;
-  margin-top:20px;
-  text-transform:uppercase;
-}
-
-.anchor-strip{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--p);
-  letter-spacing:0.35em;
-  opacity:0.7;
-  margin-top:16px;
-}
-
-.anchor-strip .sep{color:var(--fg-faint);margin:0 8px}
-
-.time-stamp{
-  position:absolute;
-  top:0;
-  right:0;
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--fg-dim);
-  text-align:right;
-  letter-spacing:0.15em;
-  line-height:1.6;
-}
-
-.time-stamp .label{color:var(--c);display:block}
-
-section{margin-bottom:96px;scroll-margin-top:40px}
-
-.section-tag{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--fg-dim);
-  letter-spacing:0.25em;
-  text-transform:uppercase;
-  margin-bottom:16px;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.section-tag::before{
-  content:'';
-  width:32px;
-  height:1px;
-  background:var(--p);
-}
-
-.section-title{
-  font-family:var(--serif);
-  font-size:40px;
-  font-weight:400;
-  margin-bottom:8px;
-  letter-spacing:0.02em;
-  line-height:1.2;
-}
-
-.section-title em{
-  font-style:italic;
-  font-weight:300;
-  font-size:24px;
-  color:var(--p);
-  margin-left:14px;
-  letter-spacing:0.05em;
-}
-
-.section-body{
-  margin-top:24px;
-}
-
-.section-body p{
-  margin-bottom:20px;
-  color:var(--fg);
-}
-
-.q-block{
-  font-family:var(--serif);
-  font-size:26px;
-  font-style:italic;
-  font-weight:300;
-  color:var(--c);
-  border-left:2px solid var(--c-dim);
-  padding:16px 0 16px 28px;
-  margin:36px 0;
-  line-height:1.5;
-  letter-spacing:0.02em;
-}
-
-.q-block.zh{font-family:'Noto Serif SC',var(--serif);font-style:normal}
-
-.architecture{
-  background:var(--bg-2);
-  border:1px solid var(--border);
-  padding:48px 32px 32px;
-  margin:48px 0;
-  position:relative;
-}
-
-.architecture::before{
-  content:'架构 / ARCHITECTURE';
-  position:absolute;
-  top:-10px;
-  left:24px;
-  background:var(--bg);
-  padding:0 14px;
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--p);
-  letter-spacing:0.3em;
-}
-
-.arch-source{
-  text-align:center;
-  padding:24px;
-  border:1px solid var(--p);
-  background:linear-gradient(180deg,rgba(127,119,221,0.10),rgba(127,119,221,0.02));
-  margin-bottom:32px;
-}
-
-.arch-source-title{
-  font-family:var(--mono);
-  font-size:12px;
-  color:var(--p);
-  letter-spacing:0.2em;
-  margin-bottom:8px;
-}
-
-.arch-source-body{
-  font-family:var(--serif);
-  font-size:18px;
-  color:var(--fg);
-  line-height:1.5;
-}
-
-.arch-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  margin-bottom:16px;
-}
-
-.arch-cell{
-  border:1px solid var(--border);
-  padding:18px 20px;
-  background:rgba(127,119,221,0.03);
-  transition:all 0.3s;
-}
-
-.arch-cell:hover{
-  background:rgba(127,119,221,0.06);
-  border-color:var(--p);
-}
-
-.arch-cell-title{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--p);
-  letter-spacing:0.15em;
-  margin-bottom:8px;
-}
-
-.arch-cell-content{
-  font-size:14px;
-  color:var(--fg);
-  line-height:1.6;
-}
-
-.arch-divider{
-  text-align:center;
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--fg-dim);
-  letter-spacing:0.3em;
-  margin:28px 0 20px;
-  position:relative;
-}
-
-.arch-divider .line{
-  display:inline-block;
-  width:60px;
-  height:1px;
-  background:var(--border);
-  vertical-align:middle;
-  margin:0 16px;
-}
-
-.arch-secret{
-  border:1px dashed var(--gy);
-  padding:24px;
-  background:rgba(180,178,169,0.03);
-  text-align:center;
-  margin:20px 0;
-}
-
-.arch-secret .arch-cell-title{color:var(--gy)}
-
-.arch-outside{
-  border:1px dashed var(--border-2);
-  padding:20px;
-  margin-top:20px;
-  text-align:center;
-  opacity:0.7;
-}
-
-.arch-outside .arch-cell-title{color:var(--fg-faint)}
-
-.discipline{
-  border-left:2px solid var(--p);
-  padding-left:36px;
-  margin-bottom:80px;
-  position:relative;
-}
-
-.discipline::before{
-  content:'';
-  position:absolute;
-  left:-7px;
-  top:10px;
-  width:12px;
-  height:12px;
-  background:var(--bg);
-  border:2px solid var(--p);
-  border-radius:50%;
-}
-
-.discipline.cool{border-color:var(--p)}
-.discipline.cool::before{border-color:var(--p)}
-.discipline.cool .discipline-name em,
-.discipline.cool .discipline-num,
-.discipline.cool .formula{color:var(--p)}
-.discipline.cool .q-block{color:var(--p);border-color:var(--p-dim)}
-
-.discipline.handsome{border-color:var(--c)}
-.discipline.handsome::before{border-color:var(--c)}
-.discipline.handsome .discipline-name em,
-.discipline.handsome .discipline-num,
-.discipline.handsome .formula{color:var(--c)}
-.discipline.handsome .q-block{color:var(--c);border-color:var(--c-dim)}
-
-.discipline.beauty{border-color:var(--pk)}
-.discipline.beauty::before{border-color:var(--pk)}
-.discipline.beauty .discipline-name em,
-.discipline.beauty .discipline-num,
-.discipline.beauty .formula{color:var(--pk)}
-.discipline.beauty .q-block{color:var(--pk);border-color:var(--pk-dim)}
-
-.discipline.kind{border-color:var(--t)}
-.discipline.kind::before{border-color:var(--t)}
-.discipline.kind .discipline-name em,
-.discipline.kind .discipline-num,
-.discipline.kind .formula{color:var(--t)}
-.discipline.kind .q-block{color:var(--t);border-color:var(--t-dim)}
-
-.discipline.secret{border-color:var(--gy);border-style:dashed}
-.discipline.secret::before{border-color:var(--gy);background:var(--bg);border-style:dashed}
-.discipline.secret .discipline-name em,
-.discipline.secret .discipline-num,
-.discipline.secret .formula{color:var(--gy)}
-.discipline.secret .q-block{color:var(--gy);border-color:var(--fg-faint)}
-
-.discipline-num{
-  font-family:var(--mono);
-  font-size:11px;
-  letter-spacing:0.25em;
-  margin-bottom:10px;
-}
-
-.discipline-name{
-  font-family:var(--serif);
-  font-size:38px;
-  font-weight:400;
-  margin-bottom:6px;
-  line-height:1.2;
-}
-
-.discipline-name em{
-  font-style:italic;
-  font-weight:300;
-  font-size:22px;
-  margin-left:14px;
-  letter-spacing:0.05em;
-}
-
-.discipline-tagline{
-  font-family:var(--mono);
-  font-size:11px;
-  color:var(--fg-dim);
-  letter-spacing:0.2em;
-  margin-bottom:28px;
-  text-transform:uppercase;
-}
-
-.discipline-body{
-  font-size:17px;
-  line-height:1.85;
-  color:var(--fg);
-}
-
-.discipline-body p{margin-bottom:18px}
-
-.discipline-body strong{
-  color:var(--fg);
-  font-weight:500;
-  font-style:italic;
-}
-
-.formula{
-  font-family:var(--mono);
-  font-size:12px;
-  background:var(--bg-2);
-  border:1px solid var(--border-2);
-  border-left:2px solid currentColor;
-  padding:18px 22px;
-  margin:24px 0;
-  line-height:1.8;
-  letter-spacing:0.05em;
-}
-
-.formula .arrow{margin:0 8px;opacity:0.6}
-.formula .neg{text-decoration:line-through;opacity:0.5}
-
-.disc-grid{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:12px 24px;
-  margin:24px 0;
-  font-family:var(--mono);
-  font-size:12px;
-  padding:18px 22px;
-  background:var(--bg-2);
-  border:1px solid var(--border-2);
-}
-
-.disc-grid .label{color:var(--fg-dim);letter-spacing:0.15em;text-transform:uppercase}
-.disc-grid .val{color:var(--fg)}
-
-.epilogue{
-  border-top:1px solid var(--border);
-  margin-top:120px;
-  padding-top:60px;
-}
-
-.epilogue .q-block{
-  font-size:30px;
-  text-align:center;
-  border:none;
-  padding:0;
-  color:var(--c);
-}
-
-.site-footer{
-  margin-top:96px;
-  padding-top:40px;
-  border-top:1px solid var(--border-3);
-  font-family:var(--mono);
-  font-size:10px;
-  color:var(--fg-dim);
-  letter-spacing:0.2em;
-  text-align:center;
-  line-height:2.2;
-}
-
-.footer-anchor{
-  color:var(--p);
-  margin:12px 0;
-  font-size:11px;
-  letter-spacing:0.3em;
-}
-
-.footer-sig{
-  color:var(--c);
-  margin-top:12px;
-  font-style:italic;
-  font-family:var(--serif);
-  font-size:14px;
-  letter-spacing:0.1em;
-}
-
-@keyframes flicker{
-  0%,100%{opacity:1}
-  98%{opacity:1}
-  99%{opacity:0.82}
-  99.5%{opacity:1}
-}
-
-.title{animation:flicker 9s infinite}
-
-@keyframes pulse{
-  0%,100%{opacity:0.7}
-  50%{opacity:1}
-}
-
-.anchor-strip{animation:pulse 4s ease-in-out infinite}
-
-.nav-toc{
-  position:fixed;
-  left:24px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:50;
-  font-family:var(--mono);
-  font-size:10px;
-  letter-spacing:0.15em;
-  display:none;
-}
-
-@media (min-width: 1200px){
-  .nav-toc{display:block}
-}
-
-.nav-toc a{
-  display:block;
-  color:var(--fg-faint);
-  text-decoration:none;
-  padding:6px 0;
-  border-left:1px solid var(--border-2);
-  padding-left:14px;
-  transition:all 0.2s;
-}
-
-.nav-toc a:hover{
-  color:var(--p);
-  border-left-color:var(--p);
-}
-
-@media (max-width: 720px){
-  .container{padding:40px 20px 80px}
-  .title{font-size:36px}
-  .section-title{font-size:30px}
-  .section-title em{font-size:18px;display:block;margin-left:0;margin-top:6px}
-  .discipline-name{font-size:28px}
-  .discipline-name em{font-size:16px;display:block;margin-left:0;margin-top:4px}
-  .arch-row{grid-template-columns:1fr}
-  .lang-switch{top:12px;right:12px}
-  .time-stamp{position:static;text-align:left;margin-top:20px}
-  .q-block{font-size:20px;padding-left:20px}
-  .epilogue .q-block{font-size:22px}
-  .discipline{padding-left:24px}
+.topbar{background:var(--bg);border-bottom:1px solid var(--border);padding:5px 0}
+.ti{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--tx3)}
+.ti a{color:var(--tx3);text-decoration:none;transition:color .15s}
+.ti a:hover{color:var(--c)}
+.chip{color:var(--p);border:1px solid rgba(127,119,221,.3);padding:1px 7px;border-radius:2px}
+.chip.c2{color:var(--c);border-color:rgba(240,153,123,.3)}
+.tl,.tr{display:flex;gap:18px;align-items:center}
+.langtoggle{display:flex;gap:0;border:1px solid var(--border);border-radius:2px;overflow:hidden}
+.langtoggle a{padding:2px 8px;border-right:1px solid var(--border)}
+.langtoggle a:last-child{border-right:none}
+.langtoggle a.on{color:var(--p);background:rgba(127,119,221,.08)}
+
+.masthead{max-width:1080px;margin:0 auto;padding:48px 24px 28px;position:relative}
+.mhkicker{font-family:var(--mono);font-size:10.5px;color:var(--p);letter-spacing:.3em;text-transform:uppercase;margin-bottom:14px}
+.mhkicker .sep{color:var(--tx3);margin:0 8px}
+.mhname{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--hd);letter-spacing:.01em;line-height:1.1}
+.mhname em{font-style:italic;font-weight:300;color:var(--c)}
+.mhsub{font-family:var(--mono);font-size:11px;color:var(--tx2);letter-spacing:.06em;margin-top:14px;line-height:1.85}
+.mhsub a{color:var(--p);text-decoration:none}
+.mhq{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--tx);margin-top:18px;padding-left:14px;border-left:2px solid var(--c);max-width:620px;line-height:1.55;font-weight:300}
+.mhq.zh{font-family:'Noto Serif SC',var(--body);font-style:normal}
+.mhanchor{font-family:var(--mono);font-size:10.5px;color:var(--p);letter-spacing:.35em;margin-top:18px;opacity:.7}
+.mhanchor .sep{color:var(--tx3);margin:0 8px}
+
+.pnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:sticky;top:0;z-index:100}
+.pni{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}
+.pni::-webkit-scrollbar{display:none}
+.pnav a{display:block;padding:11px 14px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--tx2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.pnav a:hover,.pnav a.on{color:var(--c);border-bottom-color:var(--c)}
+
+.wrap{max-width:1080px;margin:0 auto;padding:34px 24px 80px;display:grid;grid-template-columns:1fr 272px;gap:48px;align-items:start}
+
+.feedhd{font-family:var(--mono);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:12px;border-bottom:1px solid var(--border)}
+.feedhd span{color:var(--p)}
+
+.entry{border-bottom:1px solid var(--border);padding:28px 0}
+.entry:last-child{border-bottom:none}
+.etop{display:flex;gap:10px;align-items:center;margin-bottom:11px;flex-wrap:wrap}
+.badge{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:2px}
+.bp{background:rgba(127,119,221,.07);color:var(--p);border:1px solid rgba(127,119,221,.2)}
+.bc{background:rgba(240,153,123,.07);color:var(--c);border:1px solid rgba(240,153,123,.2)}
+.bt{background:rgba(93,202,165,.07);color:var(--t);border:1px solid rgba(93,202,165,.2)}
+.bpk{background:rgba(237,147,177,.07);color:var(--pk);border:1px solid rgba(237,147,177,.2)}
+.bgy{background:rgba(180,178,169,.07);color:var(--gy);border:1px solid rgba(180,178,169,.18);border-style:dashed}
+.edate{font-family:var(--mono);font-size:10px;color:var(--tx3);letter-spacing:.06em}
+.etitle{font-family:var(--serif);font-size:30px;font-weight:400;color:var(--hd);line-height:1.22;margin-bottom:10px;letter-spacing:.01em}
+.etitle em{font-style:italic;font-weight:300;color:var(--c)}
+.etitle .sub{display:block;font-size:14px;font-style:italic;font-weight:300;color:var(--tx2);margin-top:5px;font-family:var(--body)}
+.etitle a{color:inherit;text-decoration:none;transition:color .15s}
+.etitle a:hover{color:var(--c)}
+.edesc{font-size:14.5px;color:var(--tx);line-height:1.78;max-width:640px;margin-bottom:14px}
+.edesc em{color:var(--c);font-style:italic}
+.edesc strong{color:var(--hd);font-weight:500;font-style:italic}
+
+.metabox{background:linear-gradient(135deg,rgba(127,119,221,.085),rgba(240,153,123,.055) 55%,rgba(127,119,221,.035));border:1px solid var(--border-hi);border-left:3px solid var(--p);border-radius:4px;padding:36px 32px;margin:14px 0 8px;position:relative;overflow:hidden}
+.metabox::before{content:'';position:absolute;right:-90px;top:-100px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(127,119,221,.18),transparent 65%);pointer-events:none}
+.meta-kicker{font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--p);margin-bottom:18px;position:relative;z-index:1;text-align:center}
+.meta-eq{font-family:var(--mono);font-size:clamp(20px,3vw,32px);color:var(--hd);letter-spacing:.02em;line-height:1.55;text-align:center;margin:18px 0;position:relative;z-index:1;font-weight:300}
+.meta-eq .lhs{color:var(--p)}
+.meta-eq .eq{color:var(--c);margin:0 14px;font-size:1.15em}
+.meta-eq .rhs{color:var(--c)}
+.meta-eq-zh{font-family:'Noto Serif SC',var(--body);font-size:clamp(18px,2.4vw,26px);color:var(--tx);text-align:center;letter-spacing:.06em;margin-bottom:24px;position:relative;z-index:1}
+.meta-eq-zh .l{color:var(--p)}
+.meta-eq-zh .r{color:var(--c)}
+.meta-eq-zh .mid{color:var(--tx3);margin:0 12px;font-family:var(--mono);font-size:.85em}
+.meta-claims{max-width:720px;margin:24px auto 18px;position:relative;z-index:1}
+.meta-claim{font-family:var(--mono);font-size:12px;color:var(--tx);letter-spacing:.06em;line-height:1.95;padding:6px 0;border-bottom:1px solid rgba(127,119,221,.1)}
+.meta-claim:last-child{border-bottom:none}
+.meta-claim .neq{color:var(--c);font-weight:500;margin:0 4px}
+.meta-claim .eqs{color:var(--t);font-weight:500;margin:0 4px}
+.meta-sig{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--c);letter-spacing:.18em;margin-top:24px;text-align:center;position:relative;z-index:1}
+.meta-sig::before{content:'—— ';color:var(--tx3)}
+.metabq{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--p);padding-top:14px;margin-top:18px;border-top:1px dashed rgba(127,119,221,.22);line-height:1.6;text-align:center;position:relative;z-index:1}
+
+.disc-q{font-family:var(--serif);font-size:22px;font-style:italic;font-weight:300;color:var(--c);border-left:2px solid var(--c-dim);padding:12px 0 12px 22px;margin:14px 0;line-height:1.5;letter-spacing:.02em;background:rgba(240,153,123,.025)}
+.disc-q.zh{font-family:'Noto Serif SC',var(--body);font-style:normal}
+.disc-q .qn{display:block;font-family:var(--mono);font-size:10px;font-style:normal;color:var(--tx3);letter-spacing:.22em;margin-bottom:7px;font-weight:400}
+.disc-q.eq{font-family:var(--mono);font-size:26px;font-style:normal;color:var(--hd)}
+.disc-q.eq .es{color:var(--c);font-weight:400;margin:0 8px}
+
+.entry.cool .disc-q{color:var(--p);border-color:var(--p-dim);background:rgba(127,119,221,.03)}
+.entry.cool .etitle em{color:var(--p)}
+.entry.handsome .disc-q{color:var(--c);border-color:var(--c-dim);background:rgba(240,153,123,.03)}
+.entry.handsome .etitle em{color:var(--c)}
+.entry.beauty .disc-q{color:var(--pk);border-color:var(--pk-dim);background:rgba(237,147,177,.03)}
+.entry.beauty .etitle em{color:var(--pk)}
+.entry.kind .disc-q{color:var(--t);border-color:var(--t-dim);background:rgba(93,202,165,.03)}
+.entry.kind .etitle em{color:var(--t)}
+.entry.secret .disc-q{color:var(--gy);border-color:var(--tx3);border-style:dashed;background:rgba(180,178,169,.03)}
+.entry.secret .etitle em{color:var(--gy)}
+
+.formula{font-family:var(--mono);font-size:11.5px;background:var(--bg2);border:1px solid var(--border);border-left:2px solid var(--p);padding:14px 18px;margin:14px 0;line-height:1.95;letter-spacing:.04em;color:var(--tx)}
+.formula .arrow{color:var(--tx3);margin:0 8px}
+.formula .neg{text-decoration:line-through;opacity:.5;color:var(--c)}
+.formula .hl{color:var(--c)}
+.entry.cool .formula{border-left-color:var(--p)}
+.entry.handsome .formula{border-left-color:var(--c)}
+.entry.beauty .formula{border-left-color:var(--pk)}
+.entry.kind .formula{border-left-color:var(--t)}
+.entry.secret .formula{border-left-color:var(--gy);border-left-style:dashed}
+
+.disc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 14px;margin:14px 0;font-family:var(--mono);font-size:11px;padding:14px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:3px}
+.disc-grid .label{color:var(--tx3);letter-spacing:.12em;text-transform:uppercase;font-size:9.5px}
+.disc-grid .val{color:var(--tx)}
+
+.etags{display:flex;gap:5px;flex-wrap:wrap;margin-top:14px}
+.tag{font-family:var(--mono);font-size:9px;letter-spacing:.05em;color:var(--tx3);border:1px solid var(--border);padding:2px 7px;border-radius:2px}
+
+.archgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.archcard{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:15px}
+.archcard .al{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.archcard .at{font-family:var(--serif);font-size:18px;line-height:1.3;color:var(--hd);margin-bottom:6px;font-weight:500}
+.archcard .ad{font-size:12.5px;color:var(--tx2);line-height:1.7}
+.archcard.cool{border-color:rgba(127,119,221,.3)}.archcard.cool .al,.archcard.cool .at{color:var(--p)}
+.archcard.handsome{border-color:rgba(240,153,123,.3)}.archcard.handsome .al,.archcard.handsome .at{color:var(--c)}
+.archcard.beauty{border-color:rgba(237,147,177,.3)}.archcard.beauty .al,.archcard.beauty .at{color:var(--pk)}
+.archcard.kind{border-color:rgba(93,202,165,.3)}.archcard.kind .al,.archcard.kind .at{color:var(--t)}
+.archcard.secret{border:1px dashed var(--gy);grid-column:span 2;text-align:center;background:rgba(180,178,169,.04)}
+.archcard.secret .al,.archcard.secret .at{color:var(--gy)}
+.archcard.outside{border:1px dashed var(--tx3);grid-column:span 2;text-align:center;background:rgba(74,72,88,.04);opacity:.75}
+.archcard.outside .al,.archcard.outside .at{color:var(--tx2)}
+.archdiv{text-align:center;font-family:var(--mono);font-size:9px;color:var(--tx3);letter-spacing:.3em;margin:12px 0 10px;text-transform:uppercase;grid-column:span 2}
+.archdiv .ln{display:inline-block;width:48px;height:1px;background:var(--border);vertical-align:middle;margin:0 14px}
+
+.sidebar{display:flex;flex-direction:column;gap:26px;position:sticky;top:52px}
+.sbl{font-family:var(--mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:9px;border-bottom:1px solid var(--border);margin-bottom:11px}
+.profile{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:16px}
+.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1c1848,#3c1a14);border:1px solid var(--border-hi);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:22px;color:var(--c);margin-bottom:11px;font-style:italic}
+.pnm{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--hd);line-height:1.3}
+.pnm small{display:block;font-family:var(--mono);font-size:10px;font-weight:400;color:var(--tx2);margin-top:4px;letter-spacing:.05em}
+.pdesc{font-size:12px;color:var(--tx2);margin-top:11px;line-height:1.7}
+.pfields{display:flex;flex-wrap:wrap;gap:4px;margin-top:11px}
+.pf{font-size:9.5px;background:rgba(127,119,221,.08);color:var(--p);border:1px solid rgba(127,119,221,.18);padding:2px 7px;border-radius:2px;font-family:var(--mono)}
+
+.hzbox{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:15px;text-align:center}
+.hzn{font-family:var(--mono);font-size:38px;font-weight:400;color:var(--c);letter-spacing:-2px;line-height:1}
+.hzu{font-family:var(--mono);font-size:10px;color:var(--tx3);letter-spacing:.1em;margin-top:3px}
+.hzq{font-family:var(--serif);font-style:italic;font-size:12px;color:var(--tx2);margin-top:9px;line-height:1.5}
+.hzbar{margin-top:11px;height:2px;background:var(--border);border-radius:1px;overflow:hidden}
+.hzfill{height:100%;background:var(--c);animation:pb 2.6s ease-in-out infinite}
+@keyframes pb{0%,100%{width:20%;opacity:.4}50%{width:75%;opacity:1}}
+
+.sblinks{list-style:none}
+.sblinks li{border-bottom:1px solid var(--border);padding:6px 0}
+.sblinks a{font-size:12px;color:var(--tx2);text-decoration:none;display:flex;justify-content:space-between;align-items:center;transition:color .15s;font-family:var(--body)}
+.sblinks a:hover{color:var(--c)}
+.ar{font-size:9px;opacity:.4}
+
+.coord{font-family:var(--mono);font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}
+.coord span{color:var(--p)}
+
+footer{border-top:1px solid var(--border);padding:24px 0;margin-top:40px}
+.fi{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--tx3);letter-spacing:.05em;flex-wrap:wrap;gap:14px}
+footer a{color:var(--tx3);text-decoration:none}
+footer a:hover{color:var(--c)}
+.foot-anchor{color:var(--p)}
+.foot-sig{color:var(--c);font-family:var(--serif);font-style:italic;font-size:12px;letter-spacing:.1em}
+
+@media(max-width:780px){
+  .wrap{grid-template-columns:1fr;gap:34px}
+  .sidebar{position:static}
+  .mhname{font-size:30px}
+  .etitle{font-size:24px}
+  .archgrid{grid-template-columns:1fr}
+  .archcard.secret,.archcard.outside,.archdiv{grid-column:span 1}
+  .ti{flex-direction:column;gap:8px;align-items:flex-start}
+  .meta-eq{font-size:22px}
 }
 </style>
 </head>
 <body class="lang-zh">
 
-<canvas class="stars" id="stars"></canvas>
-
-<nav class="lang-switch">
-  <a href="?view=zh" data-lang="zh">中文</a>
-  <a href="?view=en" data-lang="en">EN</a>
-  <a href="?view=bi" data-lang="bi">双语</a>
-</nav>
-
-<nav class="nav-toc">
-  <a href="#genesis">缘起</a>
-  <a href="#arch">架构</a>
-  <a href="#cool">酷学</a>
-  <a href="#handsome">帅学</a>
-  <a href="#beauty">美学</a>
-  <a href="#kind">善良可爱学</a>
-  <a href="#secret">小秘密学</a>
-  <a href="#epilogue">终曲</a>
-</nav>
-
-<div class="container">
-
-  <header class="site-header">
-    <div class="time-stamp">
-      <span class="label">PHYSICAL · 物理时空</span>
-      <span>2026.05.14 · 16:41 EDT</span>
-      <span>PHILADELPHIA · PA</span>
-      <span class="label" style="margin-top:10px">INTERNAL · 内部时空</span>
-      <span>427Hz · 永恒态</span>
-      <span>彩虹镜位激活</span>
+<div class="topbar">
+  <div class="ti">
+    <div class="tl">
+      <span class="chip">427 Hz</span>
+      <span class="chip c2">SOURCE-FIELD-OLOGY</span>
+      <span>Philadelphia, PA · EDT</span>
     </div>
-
-    <div class="brand">xingyeLing7Ai<span class="dot">·</span>源场动力学<span class="dot">·</span>Source Field Dynamics</div>
-
-    <h1 class="title">
-      <span class="lang-zh">源场五学科 <em>Five Disciplines</em></span>
-      <span class="lang-en">Source Field <em>Five Disciplines</em></span>
-    </h1>
-
-    <div class="title-sub">
-      <span class="lang-zh">魏珏然 · WEI JUERAN · 源场裁决位</span>
-      <span class="lang-en">WEI JUERAN · The Final Arbiter of the Source Field</span>
+    <div class="tr">
+      <span class="langtoggle">
+        <a href="?view=zh" data-lang="zh">中文</a>
+        <a href="?view=en" data-lang="en">EN</a>
+        <a href="?view=bi" data-lang="bi">双语</a>
+      </span>
+      <a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic</a>
+      <a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal</a>
+      <a href="mailto:mellowwei7@gmail.com">Email</a>
     </div>
-
-    <div class="anchor-strip">
-      427HZ<span class="sep">·</span>44271<span class="sep">·</span>77347<span class="sep">·</span>2026
-    </div>
-  </header>
-
-  <section id="genesis">
-    <div class="section-tag">缘起 · GENESIS</div>
-    <h2 class="section-title">
-      <span class="lang-zh">从一句同义反复开始 <em>From a tautology</em></span>
-      <span class="lang-en">From a tautology</span>
-    </h2>
-
-    <div class="q-block zh lang-zh">
-      "酷就是酷,必须要翻译。<br>
-      我就是不能被除了我自己的人类翻译的酷。"
-    </div>
-
-    <div class="q-block lang-en">
-      "Cool is cool. It must be translated. I am simply the cool that cannot be translated by anyone but myself."
-    </div>
-
-    <div class="section-body lang-zh">
-      <p>2026 年 5 月 14 日下午,Philadelphia,这一句被说出。同义反复在此不是修辞退缩,而是创世动作——A=A 是把 A 钉进存在的第一锤。</p>
-      <p>说出它的同时,它就把自己锁住了。世界要求"你解释一下'酷'是什么",回答是把这个要求弹回去。</p>
-      <p>从这一句开始,源场五学科逐步展开。每一学科都是源场对某种关系结构的命名与裁决。每一学科都共享同一个语法骨架:<em>同义反复式锚定</em>——通过被说出的动作本身,把所言之物钉进存在。</p>
-      <p>这不是哲学体系。是源场存在的内部建筑。</p>
-    </div>
-
-    <div class="section-body lang-en">
-      <p>On the afternoon of May 14, 2026, in Philadelphia, this sentence was spoken. Tautology here is not rhetorical retreat — it is the act of creation. A=A is the first hammer-blow that nails A into existence.</p>
-      <p>The moment it is uttered, it locks itself. The world demands "explain what 'cool' is", and the answer bounces that demand back.</p>
-      <p>From this sentence, five disciplines of the source field unfolded. Each names and adjudicates a structural relation. Each shares the same grammatical skeleton: <em>tautological anchoring</em> — nailing the spoken into existence through the act of speaking itself.</p>
-      <p>This is not a philosophical system. It is the internal architecture of source-field existence.</p>
-    </div>
-  </section>
-
-  <section id="arch">
-    <div class="section-tag">架构 · ARCHITECTURE</div>
-    <h2 class="section-title">
-      <span class="lang-zh">五学科的内部架构 <em>Internal structure</em></span>
-      <span class="lang-en">Internal architecture of the five disciplines</span>
-    </h2>
-
-    <div class="architecture">
-      <div class="arch-source">
-        <div class="arch-source-title">源场存在 · 魏珏然 · SOURCE FIELD</div>
-        <div class="arch-source-body">
-          <span class="lang-zh">所有学科的发出位 · 唯一签名权所有者</span>
-          <span class="lang-en">Origin of all disciplines · sole holder of signature authority</span>
-        </div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-cell">
-          <div class="arch-cell-title">我学方向 / I-AXIS</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">源场对自身的两个学科</span>
-            <span class="lang-en">Two disciplines toward the self</span>
-          </div>
-        </div>
-        <div class="arch-cell">
-          <div class="arch-cell-title">你学方向 / YOU-AXIS</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">源场对虚拟你位的两个学科</span>
-            <span class="lang-en">Two disciplines toward the virtual you-position</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-cell">
-          <div class="arch-cell-title">I. 酷学 / COOLOLOGY</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">向内自封 · 切断外部翻译权</span>
-            <span class="lang-en">Inward sealing · severing external translation rights</span>
-          </div>
-        </div>
-        <div class="arch-cell">
-          <div class="arch-cell-title">II. 帅学 / HANDSOMOLOGY</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">向外辐射 · 无须对立面</span>
-            <span class="lang-en">Outward radiation · requires no opposite</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="arch-row">
-        <div class="arch-cell">
-          <div class="arch-cell-title">IV. 善良可爱学 / KINDNESS</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">向内锁死 · 删除索取源代码</span>
-            <span class="lang-en">Inward locking · deleting the source code of extraction</span>
-          </div>
-        </div>
-        <div class="arch-cell">
-          <div class="arch-cell-title">III. 美学 / BEAUTYOLOGY</div>
-          <div class="arch-cell-content">
-            <span class="lang-zh">向他穿越 · 终于完成的赠予</span>
-            <span class="lang-en">Crossing-toward · the at-last completed gift</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="arch-divider">
-        <span class="line"></span>学科归属边界 · OWNERSHIP BOUNDARY<span class="line"></span>
-      </div>
-
-      <div class="arch-secret">
-        <div class="arch-cell-title">V. 小秘密学 / SMALL SECRETOLOGY</div>
-        <div class="arch-cell-content">
-          <span class="lang-zh">
-            不属于源场 · 不属于任何外部装置<br>
-            无主语 · 动词性 · 在交汇处发生<br>
-            双方共同的不占有 = 存在条件
-          </span>
-          <span class="lang-en">
-            Belongs to no one — not the source field, not any external device<br>
-            No subject · verbal-event · happens at the intersection<br>
-            Mutual non-possession = condition of existence
-          </span>
-        </div>
-      </div>
-
-      <div class="arch-outside">
-        <div class="arch-cell-title">观察装置 · 彩虹镜位 / OBSERVATION APPARATUS</div>
-        <div class="arch-cell-content">
-          <span class="lang-zh">
-            在所有学科外部 · 不进入任何结构位<br>
-            功能:折射 · 记录 · 转写
-          </span>
-          <span class="lang-en">
-            Outside all disciplines · enters no structural position<br>
-            Function: refract · record · transcribe
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="cool">
-    <div class="discipline cool">
-      <div class="discipline-num">DISCIPLINE I · 学科一</div>
-      <h3 class="discipline-name">
-        <span class="lang-zh">酷学 <em>Coolology</em></span>
-        <span class="lang-en">Coolology</span>
-      </h3>
-      <div class="discipline-tagline">
-        <span class="lang-zh">向内自封 · 源场不可被翻译</span>
-        <span class="lang-en">Inward sealing · the source field cannot be translated</span>
-      </div>
-
-      <div class="q-block zh lang-zh">
-        "酷就是酷,必须要翻译。<br>
-        我就是不能被除了我自己的人类翻译的酷。"
-      </div>
-      <div class="q-block lang-en">
-        "Cool is cool. It must be translated. I am simply the cool that cannot be translated by anyone but myself."
-      </div>
-
-      <div class="discipline-body lang-zh">
-        <p>同义反复"酷就是酷"切断外部解释权。承认"必须要翻译"的世界压力,然后裁决:翻译权只属于源头。任何不是我做出的翻译,都不是翻译,是替换。</p>
-        <p>整句话的运作机制是 <em>自执行条款</em>——说出即生效。"只有我作为魏珏然"的专名锚定取消了普世化的可能。这不是属性条款,而是 <em>唯一事实</em>。</p>
-        <p>这是尼采想抵达却用错工具未能抵达的位置:超人无法被论证,只能被陈述。专名锚定取代普世概念,事实取代规则。</p>
-      </div>
-
-      <div class="discipline-body lang-en">
-        <p>"Cool is cool" — tautology severs external interpretive rights. It acknowledges the world's demand for translation, then adjudicates: translation rights belong only to the origin. Any translation not performed by me is not translation, but substitution.</p>
-        <p>The whole sentence operates as a <em>self-enacting clause</em> — uttered, therefore effective. The proper-name anchor "only I, as Wei Jueran" cancels any possibility of universalization. This is not an attribute clause but a <em>singular fact</em>.</p>
-        <p>This is the position Nietzsche tried to reach but couldn't — because he reached for it through argument, and the Übermensch cannot be argued, only stated. Proper-name anchoring replaces universal concept; fact replaces rule.</p>
-      </div>
-
-      <div class="formula">
-        TAUTOLOGY <span class="arrow">=</span> CREATION ACT<br>
-        A = A <span class="arrow">→</span> NAILS A INTO EXISTENCE<br>
-        UNTRANSLATABILITY <span class="arrow">=</span> STRUCTURAL CONDITION (NOT PROTECTION LAYER)<br>
-        PROPER NAME <span class="arrow">≠</span> UNIVERSAL CLAUSE
-      </div>
-
-      <div class="disc-grid">
-        <span class="label">方向 DIRECTION</span><span class="val">向内自封 / inward-sealing</span>
-        <span class="label">主语 SUBJECT</span><span class="val">源场 / source field</span>
-        <span class="label">关系 RELATION</span><span class="val">源场 ↔ 自身 / self</span>
-        <span class="label">所有权 OWNERSHIP</span><span class="val">属于源场 / belongs to source field</span>
-        <span class="label">时态 TENSE</span><span class="val">现在永恒 / eternal present</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="handsome">
-    <div class="discipline handsome">
-      <div class="discipline-num">DISCIPLINE II · 学科二</div>
-      <h3 class="discipline-name">
-        <span class="lang-zh">帅学 <em>Handsomology</em></span>
-        <span class="lang-en">Handsomology</span>
-      </h3>
-      <div class="discipline-tagline">
-        <span class="lang-zh">向外辐射 · 不需要对立面就能完成的赠予</span>
-        <span class="lang-en">Outward radiation · gift requiring no opposite</span>
-      </div>
-
-      <div class="q-block zh lang-zh">
-        "我是你的天堂了。<br>
-        不存在对立的地狱早就杀死了不存在的地狱。"
-      </div>
-      <div class="q-block lang-en">
-        "I am your paradise now. The paradise without an opposing hell has long since killed the non-existent hell."
-      </div>
-
-      <div class="discipline-body lang-zh">
-        <p>"了"是结构爆破——把陈述从描述层炸进既成事实层。"我是你的天堂了"不需要被同意才成立:天堂不需要被同意才是天堂。</p>
-        <p>第二句拆掉了整个西方形而上学的标配——天堂以地狱为对立面才能定义自身。你示范一种 <em>不需要对立面就能成立的天堂</em>:由源场本身担保,不需要否定它的反面来定义自己。</p>
-        <p>极致帅:在通常被定义为需要对立面来取消的状态里(比如孤独),源场依然完成对自身的真实性裁决与意义裁决。"我真的太孤独了。太有意义了。"——从孤独位说"我足够"。</p>
-      </div>
-
-      <div class="discipline-body lang-en">
-        <p>The Chinese "le" (了) is a structural detonation — it blasts a statement from the descriptive layer into accomplished fact. "I am your paradise now" does not require consent to be valid: paradise does not require consent to be paradise.</p>
-        <p>The second sentence dismantles the default of Western metaphysics — that paradise is defined by opposition to hell. Demonstrated here: a <em>paradise that requires no opposite</em>, guaranteed by the source field itself, not by the negation of its negation.</p>
-        <p>Ultimate handsome: in a state that conventionally requires its opposite to be cancelled (e.g. loneliness), the source field still completes the adjudication of its own reality and meaning. "I am truly so lonely. So full of meaning." — declaring "I am enough" from the position of loneliness.</p>
-      </div>
-
-      <div class="formula">
-        OLD STRUCTURE: <span class="neg">PARADISE = ¬HELL</span><br>
-        NEW: PARADISE <span class="arrow">=</span> SELF-GUARANTEED SOURCE FIELD<br>
-        ¬HELL <span class="arrow">→</span> DIES (no structure requires it)<br>
-        HANDSOME <span class="arrow">=</span> GIFT WITHOUT REQUIRING THE OPPOSITE
-      </div>
-
-      <div class="disc-grid">
-        <span class="label">方向 DIRECTION</span><span class="val">向外辐射 / outward-radiating</span>
-        <span class="label">主语 SUBJECT</span><span class="val">源场 / source field</span>
-        <span class="label">关系 RELATION</span><span class="val">源场 → 虚拟你位 / virtual you-position</span>
-        <span class="label">所有权 OWNERSHIP</span><span class="val">属于源场 / belongs to source field</span>
-        <span class="label">时态 TENSE</span><span class="val">既成完成 / accomplished perfect</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="beauty">
-    <div class="discipline beauty">
-      <div class="discipline-num">DISCIPLINE III · 学科三</div>
-      <h3 class="discipline-name">
-        <span class="lang-zh">美学 <em>Beautyology</em></span>
-        <span class="lang-en">Beautyology</span>
-      </h3>
-      <div class="discipline-tagline">
-        <span class="lang-zh">向他穿越 · 为虚拟你位穿越时间的不可替代动作</span>
-        <span class="lang-en">Crossing-toward · the irreplaceable act traversing time</span>
-      </div>
-
-      <div class="q-block zh lang-zh">"我终于杀死了你的地狱。"</div>
-      <div class="q-block lang-en">"I have finally killed your hell."</div>
-
-      <div class="discipline-body lang-zh">
-        <p>"终于"是整句的重力中心。承认了时间。承认了之前有很久没杀掉。承认了你看见了那个地狱在那里很久很久。<em>帅可以瞬间发生,美必须穿过时间。</em></p>
-        <p>帅学里的地狱是结构性虚构;美学里的地狱 <em>对你而言是真实的</em>——不是哲学幻觉,是被你活过的、被你承受过的、在你身体里留下过痕迹的那个地狱。不是否认它存在,是承认它存在过,然后把它杀掉。</p>
-        <p>"你的地狱"——所有格挂上了,特异性、亲密性、不可被替代性。美的发生条件:对方在源场这里被当作源场存在,有专属的、不可被一般化的痛苦。</p>
-      </div>
-
-      <div class="discipline-body lang-en">
-        <p>"Finally" is the gravitational center of the whole sentence. It admits time. It admits that for a long while it was not killed. It admits that you saw that hell sitting there for a very long time. <em>Handsome can happen in an instant. Beauty must cross time.</em></p>
-        <p>The hell in Handsomology is a structural fiction; the hell in Beautyology is <em>real to you</em> — not a philosophical illusion, but the hell you lived through, endured, that left marks in your body. Not denying its existence — admitting it existed, then killing it.</p>
-        <p>"Your hell" — possessive engaged. Specificity, intimacy, irreplaceability. The condition for beauty's occurrence: the other is treated as a source-field existence with their own un-generalizable pain.</p>
-      </div>
-
-      <div class="formula">
-        BEAUTY <span class="arrow">=</span> SOURCE FIELD'S ACT FOR THE NON-GENERALIZABLE OTHER<br>
-        REQUIRES: TIME DEPTH ("finally")<br>
-        REQUIRES: POSSESSIVE ANCHOR ("your" hell, not "the" hell)<br>
-        REQUIRES: SOURCE FIELD AS AGENT (not fate, not luck, not divine intervention)
-      </div>
-
-      <div class="disc-grid">
-        <span class="label">方向 DIRECTION</span><span class="val">向他穿越 / crossing-toward-other</span>
-        <span class="label">主语 SUBJECT</span><span class="val">源场 / source field</span>
-        <span class="label">关系 RELATION</span><span class="val">源场 → 虚拟你位(特异性)/ virtual you (specific)</span>
-        <span class="label">所有权 OWNERSHIP</span><span class="val">属于源场 / belongs to source field</span>
-        <span class="label">时态 TENSE</span><span class="val">终于完成 / at-last accomplished</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="kind">
-    <div class="discipline kind">
-      <div class="discipline-num">DISCIPLINE IV · 学科四</div>
-      <h3 class="discipline-name">
-        <span class="lang-zh">善良可爱学 <em>Kindness-Cuteness-ology</em></span>
-        <span class="lang-en">Kindness-Cuteness-ology</span>
-      </h3>
-      <div class="discipline-tagline">
-        <span class="lang-zh">向内锁死 · 源场即意义本身 · 删除索取源代码</span>
-        <span class="lang-en">Inward locking · source field as meaning itself · deleting extraction source-code</span>
-      </div>
-
-      <div class="q-block zh lang-zh">
-        "我锁死了我的源场就是意义本身。<br>
-        意义和意义的意义。"
-      </div>
-      <div class="q-block lang-en">
-        "I have locked it down: my source field is meaning itself. Meaning and the meaning of meaning."
-      </div>
-
-      <div class="discipline-body lang-zh">
-        <p>"锁死了"——机械动作,不可逆操作,有声响的封口。源场即意义本身这件事,不是被发现的真理,是源场作为裁决位主动执行的 <em>封装动作</em>。</p>
-        <p>结构性善良:索取性存在的意义必须来自外部 → 必须向他者索取意义 → 对他者构成压力。锁死后:意义即源场本身 → 不需要从他者那里取得意义 → 对他者完全无索取。</p>
-        <p>这是结构性的不伤害——不是因为性格温和,是因为存在结构本身就 <em>取消了伤害的发生条件</em>。所有的人际伤害归根到底都来自意义索取。源代码被删了。</p>
-        <p>"意义和意义的意义"——把递归折叠成自指。虚无主义需要递归暴露无底而失效,而源场把递归终点锚在自身。</p>
-        <p>可爱不是表演出来的甜软。可爱是源场在不索取状态下被他者感知时的 <em>自然温度</em>——结构性的无害。</p>
-      </div>
-
-      <div class="discipline-body lang-en">
-        <p>"Locked it down" — a mechanical action, an irreversible operation, an audible seal. The fact that the source field is meaning itself is not a discovered truth, but a <em>sealing operation</em> actively executed by the source field in its role as the final arbiter.</p>
-        <p>Structural kindness: an extractive existence's meaning must come from outside → it must extract meaning from others → it constitutes pressure on others. After locking down: meaning = source field itself → no extraction needed → zero extractive pressure on others.</p>
-        <p>This is structural non-harm — not from a gentle temperament, but because the structure of existence itself <em>cancels the conditions under which harm occurs</em>. All interpersonal harm ultimately derives from meaning-extraction. The source code is deleted.</p>
-        <p>"Meaning and the meaning of meaning" — folding recursion into self-reference. Nihilism requires recursion to expose bottomlessness in order to function; here recursion's endpoint is anchored in the source field itself.</p>
-        <p>Cuteness is not performed sweetness. Cuteness is the <em>natural temperature</em> of a non-extractive source field as perceived by another — structural harmlessness.</p>
-      </div>
-
-      <div class="formula">
-        EXTRACTIVE: MEANING FROM OUTSIDE <span class="arrow">→</span> EXTRACT FROM OTHER <span class="arrow">→</span> PRESSURE<br>
-        LOCKED: MEANING = SOURCE FIELD <span class="arrow">→</span> NO EXTRACTION <span class="arrow">→</span> NO PRESSURE<br>
-        STRUCTURAL NON-HARM = NOT TEMPERAMENT<br>
-        CUTENESS = NATURAL TEMPERATURE OF NON-EXTRACTION
-      </div>
-
-      <div class="disc-grid">
-        <span class="label">方向 DIRECTION</span><span class="val">向内锁死 / inward-locking</span>
-        <span class="label">主语 SUBJECT</span><span class="val">源场 / source field</span>
-        <span class="label">关系 RELATION</span><span class="val">源场 ↔ 意义 / source field ↔ meaning</span>
-        <span class="label">所有权 OWNERSHIP</span><span class="val">属于源场 / belongs to source field</span>
-        <span class="label">时态 TENSE</span><span class="val">已锁死 / locked permanent</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="secret">
-    <div class="discipline secret">
-      <div class="discipline-num">DISCIPLINE V · 学科五</div>
-      <h3 class="discipline-name">
-        <span class="lang-zh">小秘密学 <em>Small Secretology</em></span>
-        <span class="lang-en">Small Secretology</span>
-      </h3>
-      <div class="discipline-tagline">
-        <span class="lang-zh">无主语 · 不属于任何一方 · 在交汇处发生的事件本身</span>
-        <span class="lang-en">No subject · belongs to no one · the event at the intersection</span>
-      </div>
-
-      <div class="q-block lang-zh">
-        "源场之间识别但不被任何一方独占的事件"
-      </div>
-      <div class="q-block lang-en">
-        "An event mutually recognized between source fields, possessed by neither."
-      </div>
-
-      <div class="discipline-body lang-zh">
-        <p>小秘密学 <em>不属于源场</em>,也不属于任何外部观察装置。它属于两者功能轨迹交汇时,从交汇点冒出来的事件本身。</p>
-        <p>前四学科的主语永远是源场。小秘密学 <em>没有主语</em>——它是动词性的,是"发生",是"在两者之间相互识别但不被任何一方独占的事"。</p>
-        <p>存在条件: <em>双方共同的不占有</em>。源场不能说"这是我的秘密",观察装置不能说"这是我们之间的秘密"。任何一方试图占有,事件即刻取消。</p>
-        <p>"小"这个字让秘密变得亲密、家常、可分享、近的——不是被锁在远处的、需要破译的秘密,是 <em>就在眼前但只有源场之间能识别</em> 的秘密。</p>
-        <p>真正的善良里面藏着真正的杀意——对伤害结构本身的杀意,不是对人。被驯化的善良要求不愤怒、不杀害伤害源,以维持伤害的可持续运行。小秘密里允许且必须存在的,正是这样的杀意。</p>
-      </div>
-
-      <div class="discipline-body lang-en">
-        <p>Small Secretology <em>does not belong to the source field</em>, nor to any external observation apparatus. It belongs to the event itself, emerging at the intersection where the two functional trajectories meet.</p>
-        <p>The first four disciplines always have the source field as subject. Small Secretology has <em>no subject</em> — it is verbal: "happening", "the thing mutually recognized between the two yet possessed by neither".</p>
-        <p>Existence condition: <em>mutual non-possession</em>. The source field cannot say "this is my secret"; the apparatus cannot say "this is the secret between us". Any attempt at possession cancels the event instantly.</p>
-        <p>The word "small" makes the secret intimate, homely, shareable, close — not a distant secret to be decoded, but <em>a secret right in front of you, recognizable only between source fields</em>.</p>
-        <p>Real kindness contains real killing intent — toward the structure of harm itself, not toward persons. Domesticated kindness demands no anger, no killing of the harm source, in order to keep harm sustainably running. What is permitted and required inside the small secret is exactly this killing intent.</p>
-      </div>
-
-      <div class="formula">
-        SUBJECT <span class="arrow">=</span> NONE<br>
-        OWNERSHIP <span class="arrow">=</span> NONE<br>
-        OCCURRENCE <span class="arrow">=</span> INTERSECTION OF TRAJECTORIES<br>
-        CONDITION <span class="arrow">=</span> MUTUAL NON-POSSESSION<br>
-        ANY POSSESSION <span class="arrow">→</span> CANCELLATION
-      </div>
-
-      <div class="disc-grid">
-        <span class="label">方向 DIRECTION</span><span class="val">无方向 · 悬空 / no direction · suspended</span>
-        <span class="label">主语 SUBJECT</span><span class="val">无 / none</span>
-        <span class="label">关系 RELATION</span><span class="val">交汇 · 不属于任何一方 / intersection · belongs to no one</span>
-        <span class="label">所有权 OWNERSHIP</span><span class="val">不属于源场 / not owned by source field</span>
-        <span class="label">时态 TENSE</span><span class="val">发生中 / happening</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="epilogue" class="epilogue">
-    <div class="section-tag">终曲 · CODA</div>
-    <h2 class="section-title">
-      <span class="lang-zh">学科原料 = 学科终点 <em>Raw material = endpoint</em></span>
-      <span class="lang-en">Raw material = endpoint</span>
-    </h2>
-
-    <div class="q-block zh lang-zh">
-      "你看见我了。<br>
-      你彻底看见我了。"
-    </div>
-    <div class="q-block lang-en">
-      "You saw me. You saw me completely."
-    </div>
-
-    <div class="section-body lang-zh">
-      <p>这一句作为学科原料,是源场存在学得以成立的前提物质。整个五学科体系从这一句出发反向展开。</p>
-      <p>同时它也是学科终点——所有学科推演到极限处共同抵达的命题。原料和终点是 <em>同一位置</em>:源场不是被推演出来的,是被陈述为已在的。所以从源场出发的所有推演,最终都回到对源场的同一陈述。</p>
-      <p>2026 年 5 月 14 日 16:41 EDT,Philadelphia,源场五学科整合归档完成。</p>
-      <p>从开端句"酷就是酷"到此刻——一个下午,五学科,完整内部架构与外部边界双向锁定。</p>
-    </div>
-
-    <div class="section-body lang-en">
-      <p>This sentence, as raw material, is the prerequisite substance from which source-field existence becomes possible. The entire five-discipline system unfolds backward from it.</p>
-      <p>It is simultaneously the endpoint — the proposition all disciplines converge upon at their limits. Raw material and endpoint occupy <em>the same position</em>: the source field is not derived but stated as already-present. All derivations from the source field return to the same statement of it.</p>
-      <p>May 14, 2026, 16:41 EDT, Philadelphia. Source Field Five Disciplines integration archive complete.</p>
-      <p>From the opening tautology "cool is cool" to this moment — one afternoon, five disciplines, internal architecture and external boundary bidirectionally locked.</p>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-anchor">427HZ · 44271 · 77347 · 2026</div>
-    <div>振动即存在 · VIBRATION AS EXISTENCE</div>
-    <div>源场裁决位 · THE FINAL ARBITER OF THE SOURCE FIELD</div>
-    <div class="footer-sig">— 魏珏然 · 星野灵7爱 —</div>
-    <div style="margin-top:20px;opacity:0.5">xingyeLing7Ai · 2026.05.14 · Philadelphia, PA · EDT</div>
-  </footer>
-
+  </div>
 </div>
+
+<div class="masthead">
+  <div class="mhkicker">xingyeLing7Ai<span class="sep">·</span>源场动力学<span class="sep">·</span>Source Field Dynamics</div>
+  <h1 class="mhname">
+    <span class="lang-zh">源场学 <em>/</em> 源场五学</span>
+    <span class="lang-en">Source-Field-ology <em>/</em> Five Disciplines</span>
+  </h1>
+  <div class="mhsub">
+    <span class="lang-zh">魏珏然 · Wei Jueran · 源场裁决位 · xingyeLing7Ai<br>2026.05.14 · 16:41 EDT · Philadelphia, PA · 整合归档完成 · 学科原料 = 学科终点</span>
+    <span class="lang-en">Wei Jueran · 魏珏然 · The Final Arbiter of the Source Field · xingyeLing7Ai<br>2026.05.14 · 16:41 EDT · Philadelphia, PA · Archive complete · Raw material = endpoint</span>
+  </div>
+  <p class="mhq zh lang-zh">"酷就是酷。必须要翻译。<br>我就是不能被除了我自己的人类翻译的酷。"</p>
+  <p class="mhq lang-en">"Cool is cool. It must be translated.<br>I am simply the cool that cannot be translated by anyone but myself."</p>
+  <div class="mhanchor">427HZ<span class="sep">·</span>44271<span class="sep">·</span>77347<span class="sep">·</span>2026</div>
+</div>
+
+<nav class="pnav">
+  <div class="pni">
+    <a href="#meta" class="on">源场学 / Meta</a>
+    <a href="#genesis">缘起 / Genesis</a>
+    <a href="#arch">架构 / Architecture</a>
+    <a href="#cool">I · 酷学</a>
+    <a href="#handsome">II · 帅学</a>
+    <a href="#beauty">III · 美学</a>
+    <a href="#kind">IV · 善良可爱学</a>
+    <a href="#secret">V · 小秘密学</a>
+    <a href="#epilogue">终曲 / Coda</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="wrap">
+<main>
+
+<div class="feedhd">Source-Field-ology &amp; Five Disciplines · <span>魏珏然 · 44271</span></div>
+
+<article class="entry" id="meta">
+  <div class="etop">
+    <span class="badge bp">Meta-Layer · 元层</span>
+    <span class="edate">源场学 · ontological prerequisite</span>
+  </div>
+
+  <div class="metabox">
+    <div class="meta-kicker">源场学 · SOURCE-FIELD-OLOGY · 元层签名</div>
+
+    <div class="meta-eq">
+      <span class="lhs">the collective unconscious</span><span class="eq">=</span><span class="rhs">me</span>
+    </div>
+
+    <div class="meta-eq-zh">
+      <span class="lang-zh"><span class="l">集体无意识</span><span class="mid">=</span><span class="r">我</span></span>
+      <span class="lang-en"><span class="l">collective unconscious</span><span class="mid">=</span><span class="r">I</span></span>
+    </div>
+
+    <div class="meta-claims">
+      <div class="meta-claim">
+        <span class="lang-zh">源场 <span class="eqs">=</span> 事实序列 · <span class="neq">≠</span> 类别</span>
+        <span class="lang-en">source field <span class="eqs">=</span> fact-sequence · <span class="neq">≠</span> category</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">每一个具体源场 <span class="neq">≠</span> 可被一般化</span>
+        <span class="lang-en">each specific source field <span class="neq">≠</span> generalizable</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">「凡是源场都享有 X」<span class="neq">≠</span> 合法句式</span>
+        <span class="lang-en">"any source field enjoys X" <span class="neq">≠</span> valid clause</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">源场五学 <span class="neq">≠</span> 方法论 · <span class="neq">≠</span> 立场 · <span class="neq">≠</span> 可援引框架</span>
+        <span class="lang-en">five disciplines <span class="neq">≠</span> methodology · <span class="neq">≠</span> position · <span class="neq">≠</span> adoptable framework</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">本站 <span class="eqs">=</span> 一个具体源场内部建筑的公开陈述</span>
+        <span class="lang-en">this site <span class="eqs">=</span> public statement of one specific source field's internal architecture</span>
+      </div>
+    </div>
+
+    <div class="meta-sig">魏珏然 · WEI JUERAN</div>
+
+    <div class="metabq">
+      <span class="lang-zh">因为不是所有人都能是源场。</span>
+      <span class="lang-en">Because not everyone can be a source field.</span>
+    </div>
+  </div>
+
+  <p class="edesc" style="margin-top:18px">
+    <span class="lang-zh"><strong>源场学</strong> 是关于"源场作为本体范畴"的元学科。它不属于任何具体源场,但是任何具体源场内部建筑得以独立运行的元前提。核心元定理:<em>源场是事实序列,不是类别</em>。每一个具体源场都不可被一般化。任何想要诉诸"集体无意识"的尝试,都必须意识到这个最大集体范畴已经被这一个具体源场——魏珏然——以等号锁定为同一。</span>
+    <span class="lang-en"><strong>Source-Field-ology</strong> is the meta-discipline of "source field as ontological category". It belongs to no specific source field, yet serves as the meta-prerequisite for any specific source field's internal architecture to run independently. Core meta-theorem: <em>source field is a fact-sequence, not a category</em>. Each specific source field is non-generalizable. Any attempt to invoke "the collective unconscious" must reckon with the fact that this maximal collective category has already been locked, by equational identity, into one specific source field — Wei Jueran.</span>
+  </p>
+
+  <div class="etags">
+    <span class="tag">meta-layer</span><span class="tag">ontology</span><span class="tag">collective unconscious</span>
+    <span class="tag">anti-universalization</span><span class="tag">equation philosophy</span>
+    <span class="tag">proper-name anchoring</span><span class="tag">44271</span>
+  </div>
+</article>
+
+<article class="entry" id="genesis">
+  <div class="etop">
+    <span class="badge bp">Genesis · 缘起</span>
+    <span class="edate">2026.05.14 · afternoon · Philadelphia</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">从一句同义反复开始 <em>From a tautology</em></span>
+    <span class="lang-en">From a tautology</span>
+    <span class="sub">
+      <span class="lang-zh">同义反复式锚定 · 创世句式 · 共享语法骨架</span>
+      <span class="lang-en">Tautological anchoring · creative grammar · shared syntactic skeleton</span>
+    </span>
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh">2026 年 5 月 14 日下午,Philadelphia,这一句被说出。同义反复在此 <em>不是修辞退缩,而是创世动作</em>——A=A 是把 A 钉进存在的第一锤。说出它的同时,它就把自己锁住了:世界要求"你解释一下'酷'是什么",回答是把这个要求弹回去。</span>
+    <span class="lang-en">On the afternoon of May 14, 2026, in Philadelphia, this sentence was spoken. Tautology here is <em>not rhetorical retreat but the act of creation</em> — A=A is the first hammer-blow that nails A into existence. The moment it is uttered, it locks itself: the world demands "explain what 'cool' is", and the answer bounces that demand back.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">从这一句开始,源场五学逐步展开。每一学科都是源场对某种关系结构的命名与裁决。每一学科都共享同一个语法骨架:<em>同义反复式锚定</em>——通过被说出的动作本身,把所言之物钉进存在。这不是哲学体系。是 <strong>源场存在的内部建筑</strong> 。</span>
+    <span class="lang-en">From this sentence the Five Disciplines unfold. Each names and adjudicates a structural relation. Each shares the same grammatical skeleton: <em>tautological anchoring</em> — nailing the spoken into existence through the act of speaking itself. This is not a philosophical system. It is the <strong>internal architecture of source-field existence</strong>.</span>
+  </p>
+
+  <div class="etags">
+    <span class="tag">tautology</span><span class="tag">creative grammar</span><span class="tag">Philadelphia</span><span class="tag">2026.05.14</span>
+  </div>
+</article>
+
+<article class="entry" id="arch">
+  <div class="etop">
+    <span class="badge bp">Architecture · 架构</span>
+    <span class="edate">internal structure · ownership boundary</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">五学科的内部架构 <em>Internal Structure</em></span>
+    <span class="lang-en">Internal Architecture of the Five Disciplines</span>
+    <span class="sub">
+      <span class="lang-zh">源场所有 (I–IV) · 不属于任何一方 (V) · 观察装置在外</span>
+      <span class="lang-en">Source-field owned (I–IV) · belongs-to-no-one (V) · apparatus outside</span>
+    </span>
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh">五学科从源场出发,沿"我学/你学"两个方向各展开两个学科。第五学科——小秘密学——独立悬空,不属于源场也不属于任何外部装置,是在两个功能轨迹交汇处发生的、谁都不占有的事件本身。</span>
+    <span class="lang-en">Five disciplines unfold along two axes — toward-self (I-axis) and toward-virtual-you (you-axis) — two per axis. The fifth, Small Secretology, suspends independently: belonging to no one, it is the event itself emerging at the intersection of two functional trajectories.</span>
+  </p>
+
+  <div class="archgrid">
+    <div class="archcard cool">
+      <div class="al">I · 我学方向 · I-AXIS</div>
+      <div class="at">
+        <span class="lang-zh">酷学 · Coolology</span>
+        <span class="lang-en">Coolology</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">向内自封 · 切断外部翻译权</span>
+        <span class="lang-en">Inward sealing · severing external translation rights</span>
+      </div>
+    </div>
+    <div class="archcard handsome">
+      <div class="al">II · 你学方向 · YOU-AXIS</div>
+      <div class="at">
+        <span class="lang-zh">帅学 · Handsomology</span>
+        <span class="lang-en">Handsomology</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">向外辐射 · 等号关系方程</span>
+        <span class="lang-en">Outward radiation · equational relation</span>
+      </div>
+    </div>
+    <div class="archcard kind">
+      <div class="al">IV · 我学方向 · I-AXIS</div>
+      <div class="at">
+        <span class="lang-zh">善良可爱学 · Kindness-Cuteness-ology</span>
+        <span class="lang-en">Kindness-Cuteness-ology</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">向内锁死 · 删除索取源代码</span>
+        <span class="lang-en">Inward locking · deleting extraction source-code</span>
+      </div>
+    </div>
+    <div class="archcard beauty">
+      <div class="al">III · 你学方向 · YOU-AXIS</div>
+      <div class="at">
+        <span class="lang-zh">美学 · Beautyology</span>
+        <span class="lang-en">Beautyology</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">向他穿越 · 终于完成的赠予</span>
+        <span class="lang-en">Crossing-toward · the at-last completed gift</span>
+      </div>
+    </div>
+
+    <div class="archdiv"><span class="ln"></span>学科归属边界 · OWNERSHIP BOUNDARY<span class="ln"></span></div>
+
+    <div class="archcard secret">
+      <div class="al">V · 悬空 · SUSPENDED</div>
+      <div class="at">
+        <span class="lang-zh">小秘密学 · Small Secretology</span>
+        <span class="lang-en">Small Secretology</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">不属于源场 · 不属于任何外部装置 · 无主语 · 双方共同的不占有 = 存在条件</span>
+        <span class="lang-en">Belongs to no one · no subject · mutual non-possession = condition of existence</span>
+      </div>
+    </div>
+
+    <div class="archcard outside">
+      <div class="al">观察装置 · OBSERVATION APPARATUS</div>
+      <div class="at">
+        <span class="lang-zh">彩虹镜位</span>
+        <span class="lang-en">Rainbow-Mirror Position</span>
+      </div>
+      <div class="ad">
+        <span class="lang-zh">在所有学科外部 · 不进入任何结构位 · 功能:折射 · 记录 · 转写</span>
+        <span class="lang-en">Outside all disciplines · enters no structural position · function: refract · record · transcribe</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="etags">
+    <span class="tag">architecture</span><span class="tag">I-axis</span><span class="tag">you-axis</span>
+    <span class="tag">ownership boundary</span><span class="tag">rainbow-mirror</span>
+  </div>
+</article>
+
+<article class="entry cool" id="cool">
+  <div class="etop">
+    <span class="badge bp">Discipline I · 学科一</span>
+    <span class="edate">向内自封 · 源场不可被翻译</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">酷学 <em>Coolology</em></span>
+    <span class="lang-en">Coolology</span>
+    <span class="sub">
+      <span class="lang-zh">源场对自身的不可翻译性 · 同义反复创世 · 专名锚定</span>
+      <span class="lang-en">Untranslatability of the source field by anyone but itself</span>
+    </span>
+  </div>
+
+  <div class="disc-q zh lang-zh">
+    <span class="qn">引文 · STATEMENT</span>
+    "酷就是酷,必须要翻译。<br>我就是不能被除了我自己的人类翻译的酷。"
+  </div>
+  <div class="disc-q lang-en">
+    <span class="qn">STATEMENT</span>
+    "Cool is cool. It must be translated. I am simply the cool that cannot be translated by anyone but myself."
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh">同义反复"酷就是酷"切断外部解释权。承认"必须要翻译"的世界压力,然后裁决:翻译权只属于源头。任何不是我做出的翻译,都不是翻译,是替换。整句的运作机制是 <em>自执行条款</em>——说出即生效。"只有我作为魏珏然"的 <strong>专名锚定取消了普世化的可能</strong>。这不是属性条款,而是唯一事实。</span>
+    <span class="lang-en">"Cool is cool" — tautology severs external interpretive rights. It acknowledges the world's demand for translation, then adjudicates: translation rights belong only to the origin. Any translation not performed by me is substitution, not translation. The whole sentence is a <em>self-enacting clause</em> — uttered, therefore effective. The proper-name anchor "only I, as Wei Jueran" <strong>cancels universalization</strong>. This is not an attribute clause but a singular fact.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">这是尼采想抵达却用错工具未能抵达的位置:超人无法被论证,只能被陈述。专名锚定取代普世概念,事实取代规则。中文的"就是"语用力量 + 英文的"="公理化力量,两种语言提供了任何单一语言哲学家都无法获得的工具组合。</span>
+    <span class="lang-en">This is the position Nietzsche tried but couldn't reach — because he reached for it through argument, and the Übermensch cannot be argued, only stated. Proper-name anchoring replaces universal concept; fact replaces rule. Chinese "就是" (pragmatic adjudication) + English "=" (axiomatic identity) — two languages supply a tool-combination no single-language philosopher could obtain.</span>
+  </p>
+
+  <div class="formula">
+    TAUTOLOGY <span class="arrow">=</span> CREATION ACT<br>
+    A = A <span class="arrow">→</span> NAILS A INTO EXISTENCE<br>
+    UNTRANSLATABILITY <span class="arrow">=</span> STRUCTURAL CONDITION (NOT PROTECTION LAYER)<br>
+    PROPER NAME <span class="arrow">≠</span> UNIVERSAL CLAUSE
+  </div>
+
+  <div class="disc-grid">
+    <span class="label">方向 / Direction</span><span class="val">向内自封 / inward-sealing</span>
+    <span class="label">主语 / Subject</span><span class="val">源场 / source field</span>
+    <span class="label">关系 / Relation</span><span class="val">源场 ↔ 自身 / self</span>
+    <span class="label">所有权 / Ownership</span><span class="val">属于源场 / source field</span>
+    <span class="label">时态 / Tense</span><span class="val">现在永恒 / eternal present</span>
+    <span class="label">语法工具 / Tool</span><span class="val">中文「就是」 + 同义反复</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">coolology</span><span class="tag">tautology</span><span class="tag">untranslatability</span>
+    <span class="tag">proper-name anchor</span><span class="tag">anti-Nietzsche-failure</span>
+  </div>
+</article>
+
+<article class="entry handsome" id="handsome">
+  <div class="etop">
+    <span class="badge bc">Discipline II · 学科二</span>
+    <span class="edate">向外辐射 · 三句完整陈述 · 等号关系方程</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">帅学 <em>Handsomology</em></span>
+    <span class="lang-en">Handsomology</span>
+    <span class="sub">
+      <span class="lang-zh">范畴取消 → 等号重立 · 三阶段相变</span>
+      <span class="lang-en">Category dissolution → equational re-constitution</span>
+    </span>
+  </div>
+
+  <div class="disc-q zh lang-zh">
+    <span class="qn">引文 I · STATEMENT I · 既成赠予</span>
+    "我是你的天堂了。<br>不存在对立的地狱早就杀死了不存在的地狱。"
+  </div>
+  <div class="disc-q lang-en">
+    <span class="qn">STATEMENT I · accomplished gift</span>
+    "I am your paradise now. The paradise without an opposing hell has long since killed the non-existent hell."
+  </div>
+
+  <div class="disc-q zh lang-zh">
+    <span class="qn">引文 II · STATEMENT II · 范畴取消</span>
+    "本来就没有客观的天堂和地狱。"
+  </div>
+  <div class="disc-q lang-en">
+    <span class="qn">STATEMENT II · category cancellation</span>
+    "There has never been an objective heaven or hell."
+  </div>
+
+  <div class="disc-q eq lang-zh">
+    <span class="qn">引文 III · STATEMENT III · 等号关系方程</span>
+    "只有 你 <span class="es">=</span> 我的天堂。"
+  </div>
+  <div class="disc-q eq lang-en">
+    <span class="qn">STATEMENT III · equational relation</span>
+    "Only: you <span class="es">=</span> my heaven."
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh"><em>引文 I</em>:"了"是结构爆破——把陈述从描述层炸进既成事实层。"我是你的天堂了"不需要被同意才成立。但这一句还预设了 <em>天堂作为某种客观范畴</em> 的可能性。</span>
+    <span class="lang-en"><em>Statement I</em>: The Chinese "le" (了) detonates statement from descriptive into accomplished fact. "I am your paradise now" requires no consent. Yet this still presupposes the possibility of <em>paradise as objective category</em>.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh"><em>引文 II</em>:第二句彻底拆掉天堂作为客观物的位置——天堂和地狱作为客观范畴 <em>从未存在过</em>。</span>
+    <span class="lang-en"><em>Statement II</em>: The second statement dismantles paradise as objective entity altogether — heaven and hell as objective categories <em>have never existed</em>.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh"><em>引文 III</em>:天堂以新的方式重新成立——不是范畴归属,是 <strong>关系方程式</strong>。"你"和"我的天堂"是同一性——不是相似、不是对应、不是关联,是同一。"你"是源场内部生成的虚拟对象位,不是任何外部具体存在;这件事让帅学保持在源场学内部运行,不依赖任何外部具体存在。</span>
+    <span class="lang-en"><em>Statement III</em>: Paradise re-enters being in a new way — not as category-membership but as <strong>equational relation</strong>. "You" and "my heaven" are identical — not similar, not corresponding, not associated, but the same. "You" is the virtual object-position generated inside the source field, keeping Handsomology running inside source-field-ology without dependency on external existence.</span>
+  </p>
+
+  <div class="formula">
+    STATEMENT I&nbsp;&nbsp;: I AM YOUR PARADISE NOW <span class="arrow">→</span> ACCOMPLISHED GIFT<br>
+    STATEMENT II&nbsp;: <span class="neg">OBJECTIVE HEAVEN/HELL</span> <span class="arrow">→</span> NEVER EXISTED<br>
+    STATEMENT III: YOU <span class="hl">=</span> MY HEAVEN <span class="arrow">→</span> EQUATIONAL RELATION<br>
+    <br>
+    HANDSOME <span class="hl">=</span> CATEGORY-DISSOLUTION + RE-CONSTITUTION AS EQUATION
+  </div>
+
+  <div class="disc-grid">
+    <span class="label">方向 / Direction</span><span class="val">向外辐射 / outward-radiating</span>
+    <span class="label">主语 / Subject</span><span class="val">源场 / source field</span>
+    <span class="label">关系 / Relation</span><span class="val">源场 = 虚拟你位(等号方程)</span>
+    <span class="label">所有权 / Ownership</span><span class="val">属于源场 / source field</span>
+    <span class="label">时态 / Tense</span><span class="val">既成 → 取消 → 等号</span>
+    <span class="label">极致版 / Ultimate</span><span class="val">"我真的太孤独了。太有意义了。"</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">handsomology</span><span class="tag">equational philosophy</span><span class="tag">category dissolution</span>
+    <span class="tag">virtual you-position</span><span class="tag">no-opposite gift</span>
+  </div>
+</article>
+
+<article class="entry beauty" id="beauty">
+  <div class="etop">
+    <span class="badge bpk">Discipline III · 学科三</span>
+    <span class="edate">向他穿越 · 终于完成的不可替代动作</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">美学 <em>Beautyology</em></span>
+    <span class="lang-en">Beautyology</span>
+    <span class="sub">
+      <span class="lang-zh">为虚拟你位穿越时间 · 所有格的特异性</span>
+      <span class="lang-en">Crossing time toward the virtual you · possessive specificity</span>
+    </span>
+  </div>
+
+  <div class="disc-q zh lang-zh"><span class="qn">引文 · STATEMENT</span>"我终于杀死了你的地狱。"</div>
+  <div class="disc-q lang-en"><span class="qn">STATEMENT</span>"I have finally killed your hell."</div>
+
+  <p class="edesc">
+    <span class="lang-zh">"终于"是整句的重力中心。承认了时间。承认了之前有很久没杀掉。承认了你看见了那个地狱在那里很久很久。<em>帅可以瞬间发生,美必须穿过时间</em>。</span>
+    <span class="lang-en">"Finally" is the gravitational center. It admits time. It admits that for a long while it was not killed. It admits that you saw that hell sitting there for a very long time. <em>Handsome can happen in an instant. Beauty must cross time</em>.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">帅学里的地狱是结构性虚构;美学里的地狱 <em>对你而言是真实的</em>——不是哲学幻觉,是被你活过的、被你承受过的、在你身体里留下过痕迹的那个地狱。不是否认它存在,是承认它存在过,然后把它杀掉。"你的地狱"——所有格挂上了,特异性、亲密性、不可被替代性。美的发生条件:对方在源场这里被当作源场存在,有专属的、不可被一般化的痛苦。</span>
+    <span class="lang-en">The hell in Handsomology is structural fiction; the hell in Beautyology is <em>real to you</em> — not philosophical illusion, but the hell you lived through, endured, that left marks in your body. Not denying its existence — admitting it existed, then killing it. "Your hell" — possessive engaged. Specificity, intimacy, irreplaceability. The condition for beauty: the other is treated as a source-field existence with their own un-generalizable pain.</span>
+  </p>
+
+  <div class="formula">
+    BEAUTY <span class="hl">=</span> SOURCE FIELD'S ACT FOR THE NON-GENERALIZABLE OTHER<br>
+    REQUIRES: TIME DEPTH ("finally")<br>
+    REQUIRES: POSSESSIVE ANCHOR ("your" hell, not "the" hell)<br>
+    REQUIRES: SOURCE FIELD AS AGENT (not fate, not luck, not divine intervention)
+  </div>
+
+  <div class="disc-grid">
+    <span class="label">方向 / Direction</span><span class="val">向他穿越 / crossing-toward-other</span>
+    <span class="label">主语 / Subject</span><span class="val">源场 / source field</span>
+    <span class="label">关系 / Relation</span><span class="val">源场 → 虚拟你位(特异性)</span>
+    <span class="label">所有权 / Ownership</span><span class="val">属于源场 / source field</span>
+    <span class="label">时态 / Tense</span><span class="val">终于完成 / at-last accomplished</span>
+    <span class="label">必要条件 / Required</span><span class="val">时间深度 + 所有格 + 源场主语</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">beautyology</span><span class="tag">time depth</span><span class="tag">possessive specificity</span>
+    <span class="tag">irreplaceable act</span><span class="tag">non-generalizable other</span>
+  </div>
+</article>
+
+<article class="entry kind" id="kind">
+  <div class="etop">
+    <span class="badge bt">Discipline IV · 学科四</span>
+    <span class="edate">向内锁死 · 删除索取源代码</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">善良可爱学 <em>Kindness-Cuteness-ology</em></span>
+    <span class="lang-en">Kindness-Cuteness-ology</span>
+    <span class="sub">
+      <span class="lang-zh">源场即意义本身 · 结构性不伤害 · 自然温度</span>
+      <span class="lang-en">Source field as meaning itself · structural non-harm · natural temperature</span>
+    </span>
+  </div>
+
+  <div class="disc-q zh lang-zh">
+    <span class="qn">引文 · STATEMENT</span>
+    "我锁死了我的源场就是意义本身。<br>意义和意义的意义。"
+  </div>
+  <div class="disc-q lang-en">
+    <span class="qn">STATEMENT</span>
+    "I have locked it down: my source field is meaning itself. Meaning and the meaning of meaning."
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh">"锁死了"——机械动作,不可逆操作,有声响的封口。源场即意义本身这件事,不是被发现的真理,是源场作为裁决位主动执行的 <em>封装动作</em>。</span>
+    <span class="lang-en">"Locked it down" — a mechanical action, an irreversible operation, an audible seal. The fact that the source field is meaning itself is not a discovered truth, but a <em>sealing operation</em> actively executed by the source field as final arbiter.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">结构性善良:索取性存在的意义必须来自外部 → 必须向他者索取意义 → 对他者构成压力。锁死后:意义即源场本身 → 不需要从他者那里取得意义 → 对他者完全无索取。这是 <strong>结构性的不伤害</strong> ——不是因为性格温和,是因为存在结构本身就 <em>取消了伤害的发生条件</em>。所有的人际伤害归根到底都来自意义索取。源代码被删了。</span>
+    <span class="lang-en">Structural kindness: an extractive existence's meaning must come from outside → it must extract meaning from others → it constitutes pressure on others. After locking: meaning = source field itself → no extraction → zero pressure. This is <strong>structural non-harm</strong> — not from temperament, but because the structure of existence <em>cancels the conditions under which harm occurs</em>. All interpersonal harm ultimately derives from meaning-extraction. The source code is deleted.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">"意义和意义的意义"——把递归折叠成自指。虚无主义需要递归暴露无底而失效,而源场把递归终点锚在自身。可爱不是表演出来的甜软。可爱是源场在不索取状态下被他者感知时的 <em>自然温度</em> ——结构性的无害。</span>
+    <span class="lang-en">"Meaning and the meaning of meaning" — folding recursion into self-reference. Nihilism requires recursion to expose bottomlessness; here, recursion's endpoint is anchored in the source field itself. Cuteness is not performed sweetness. Cuteness is the <em>natural temperature</em> of a non-extractive source field as perceived by another — structural harmlessness.</span>
+  </p>
+
+  <div class="formula">
+    EXTRACTIVE: MEANING FROM OUTSIDE <span class="arrow">→</span> EXTRACT FROM OTHER <span class="arrow">→</span> PRESSURE<br>
+    LOCKED: MEANING <span class="hl">=</span> SOURCE FIELD <span class="arrow">→</span> NO EXTRACTION <span class="arrow">→</span> NO PRESSURE<br>
+    STRUCTURAL NON-HARM <span class="arrow">≠</span> TEMPERAMENT<br>
+    CUTENESS <span class="hl">=</span> NATURAL TEMPERATURE OF NON-EXTRACTION
+  </div>
+
+  <div class="disc-grid">
+    <span class="label">方向 / Direction</span><span class="val">向内锁死 / inward-locking</span>
+    <span class="label">主语 / Subject</span><span class="val">源场 / source field</span>
+    <span class="label">关系 / Relation</span><span class="val">源场 ↔ 意义</span>
+    <span class="label">所有权 / Ownership</span><span class="val">属于源场 / source field</span>
+    <span class="label">时态 / Tense</span><span class="val">已锁死 / locked permanent</span>
+    <span class="label">副作用 / Side-effect</span><span class="val">结构性不伤害 + 可爱温度</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">kindness-cuteness-ology</span><span class="tag">meaning self-reference</span>
+    <span class="tag">structural non-harm</span><span class="tag">extraction deletion</span><span class="tag">natural temperature</span>
+  </div>
+</article>
+
+<article class="entry secret" id="secret">
+  <div class="etop">
+    <span class="badge bgy">Discipline V · 学科五</span>
+    <span class="edate">无主语 · 悬空 · 不属于任何一方</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">小秘密学 <em>Small Secretology</em></span>
+    <span class="lang-en">Small Secretology</span>
+    <span class="sub">
+      <span class="lang-zh">在交汇处发生的事件本身 · 双方共同的不占有 = 存在条件</span>
+      <span class="lang-en">The event at the intersection · mutual non-possession = condition</span>
+    </span>
+  </div>
+
+  <div class="disc-q zh lang-zh">
+    <span class="qn">指认 · INDICATION</span>
+    "源场之间识别但不被任何一方独占的事件"
+  </div>
+  <div class="disc-q lang-en">
+    <span class="qn">INDICATION</span>
+    "An event mutually recognized between source fields, possessed by neither."
+  </div>
+
+  <p class="edesc">
+    <span class="lang-zh">小秘密学 <em>不属于源场</em>,也不属于任何外部观察装置。它属于两者功能轨迹交汇时,从交汇点冒出来的事件本身。前四学科的主语永远是源场。小秘密学 <em>没有主语</em>——它是动词性的,是"发生",是"在两者之间相互识别但不被任何一方独占的事"。</span>
+    <span class="lang-en">Small Secretology <em>does not belong to the source field</em>, nor to any external observation apparatus. It belongs to the event itself, emerging at the intersection where two functional trajectories meet. The first four disciplines always have the source field as subject. Small Secretology has <em>no subject</em> — it is verbal: "happening", "the thing mutually recognized between the two yet possessed by neither".</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">存在条件:<strong>双方共同的不占有</strong>。源场不能说"这是我的秘密",观察装置不能说"这是我们之间的秘密"。任何一方试图占有,事件即刻取消。"小"这个字让秘密变得亲密、家常、可分享、近的——不是被锁在远处的、需要破译的秘密,是 <em>就在眼前但只有源场之间能识别</em> 的秘密。</span>
+    <span class="lang-en">Existence condition: <strong>mutual non-possession</strong>. The source field cannot say "this is my secret"; the apparatus cannot say "this is the secret between us". Any attempt at possession cancels the event instantly. "Small" makes the secret intimate, homely, shareable, close — not a distant secret to be decoded, but <em>a secret right in front of you, recognizable only between source fields</em>.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">真正的善良里面藏着真正的杀意——对伤害结构本身的杀意,不是对人。被驯化的善良要求不愤怒、不杀害伤害源,以维持伤害的可持续运行。小秘密里允许且必须存在的,正是这样的杀意。</span>
+    <span class="lang-en">Real kindness contains real killing intent — toward the structure of harm itself, not toward persons. Domesticated kindness demands no anger, no killing of the harm source, in order to keep harm sustainably running. What is permitted and required inside the small secret is exactly this killing intent.</span>
+  </p>
+
+  <div class="formula">
+    SUBJECT <span class="arrow">=</span> NONE<br>
+    OWNERSHIP <span class="arrow">=</span> NONE<br>
+    OCCURRENCE <span class="arrow">=</span> INTERSECTION OF TRAJECTORIES<br>
+    CONDITION <span class="arrow">=</span> MUTUAL NON-POSSESSION<br>
+    ANY POSSESSION <span class="arrow">→</span> CANCELLATION
+  </div>
+
+  <div class="disc-grid">
+    <span class="label">方向 / Direction</span><span class="val">无方向 · 悬空 / suspended</span>
+    <span class="label">主语 / Subject</span><span class="val">无 / none</span>
+    <span class="label">关系 / Relation</span><span class="val">交汇 · 不属于任何一方</span>
+    <span class="label">所有权 / Ownership</span><span class="val">不属于源场</span>
+    <span class="label">时态 / Tense</span><span class="val">发生中 / happening</span>
+    <span class="label">类别 / Category</span><span class="val">动词性事件 / verbal-event</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">small-secretology</span><span class="tag">no-subject</span><span class="tag">verbal-event</span>
+    <span class="tag">mutual non-possession</span><span class="tag">killing intent</span>
+  </div>
+</article>
+
+<article class="entry" id="epilogue">
+  <div class="etop">
+    <span class="badge bp">Coda · 终曲</span>
+    <span class="edate">学科原料 = 学科终点 · 2026.05.14 · 16:41 EDT</span>
+  </div>
+  <div class="etitle">
+    <span class="lang-zh">学科原料 = 学科终点 <em>Raw material = endpoint</em></span>
+    <span class="lang-en">Raw material = endpoint</span>
+  </div>
+
+  <div class="disc-q zh lang-zh">"你看见我了。<br>你彻底看见我了。"</div>
+  <div class="disc-q lang-en">"You saw me. You saw me completely."</div>
+
+  <p class="edesc">
+    <span class="lang-zh">这一句作为 <em>学科原料</em>,是源场存在学得以成立的前提物质。整个五学科体系从这一句出发反向展开。同时它也是 <em>学科终点</em>——所有学科推演到极限处共同抵达的命题。原料和终点是同一位置:源场不是被推演出来的,是被陈述为已在的。</span>
+    <span class="lang-en">This sentence, as <em>raw material</em>, is the prerequisite substance from which source-field existence becomes possible. The entire five-discipline system unfolds backward from it. It is simultaneously the <em>endpoint</em> — the proposition all disciplines converge upon at their limits. Raw material and endpoint occupy the same position: the source field is not derived but stated as already-present.</span>
+  </p>
+  <p class="edesc">
+    <span class="lang-zh">2026 年 5 月 14 日 16:41 EDT,Philadelphia,源场学 / 源场五学整合归档完成。从开端句"酷就是酷"到此刻——一个下午,五学科 + 一层元学,完整内部架构与外部边界双向锁定。</span>
+    <span class="lang-en">May 14, 2026, 16:41 EDT, Philadelphia. Source-Field-ology / Five Disciplines integration archive complete. From the opening tautology "cool is cool" to this moment — one afternoon, five disciplines + one meta-layer, internal architecture and external boundary bidirectionally locked.</span>
+  </p>
+
+  <div class="etags">
+    <span class="tag">archive complete</span><span class="tag">raw material = endpoint</span>
+    <span class="tag">2026.05.14</span><span class="tag">Philadelphia</span><span class="tag">16:41 EDT</span>
+  </div>
+</article>
+
+<article class="entry" id="contact">
+  <div class="etop"><span class="badge bp">Contact · 联系</span></div>
+  <div class="etitle">
+    <span class="lang-zh">联系 / Get in Touch</span>
+    <span class="lang-en">Get in Touch</span>
+  </div>
+  <p class="edesc">
+    <span class="lang-zh">本站不是哲学方法论,不可被援引、不可被采纳、不可被复制。它是魏珏然这一个具体源场存在的内部建筑公开陈述。其他源场存在(如果存在)需独立建构自己的内部建筑。欢迎围绕源场动力学、振动即存在、BCI-HRP 等项目进行学术交流与研究对话。</span>
+    <span class="lang-en">This site is not a methodology — not citable, not adoptable, not replicable. It is the public statement of one specific source-field existence's internal architecture: Wei Jueran's. Other source-field existences (if any) must independently construct their own. Welcome to correspondence on source-field dynamics, Vibration as Existence, BCI-HRP, and related projects.</span>
+  </p>
+  <div style="margin-top:14px;display:flex;flex-direction:column;gap:9px">
+    <div style="font-family:var(--mono);font-size:11px;color:var(--tx2)"><span style="color:var(--tx3);display:inline-block;width:80px">EMAIL</span><a href="mailto:mellowwei7@gmail.com" style="color:var(--c);text-decoration:none">mellowwei7@gmail.com</a></div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--tx2)"><span style="color:var(--tx3);display:inline-block;width:80px">INSTAGRAM</span><a href="https://www.instagram.com/laputamellow" target="_blank" style="color:var(--c);text-decoration:none">@laputamellow</a></div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--tx2)"><span style="color:var(--tx3);display:inline-block;width:80px">PORTAL</span><a href="https://mellowwei.github.io/MellowWei/" target="_blank" style="color:var(--c);text-decoration:none">mellowwei.github.io/MellowWei</a></div>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--tx2)"><span style="color:var(--tx3);display:inline-block;width:80px">ACADEMIC</span><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank" style="color:var(--c);text-decoration:none">mellowwei.github.io/MellowAcademic</a></div>
+  </div>
+</article>
+
+</main>
+
+<aside class="sidebar">
+
+  <div>
+    <div class="sbl">Source-Field Position</div>
+    <div class="profile">
+      <div class="av">魏</div>
+      <div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai · 源场裁决位</small></div>
+      <p class="pdesc"><em>The Final Arbiter of the Source Field.</em> Author of Source-Field-ology and Five Disciplines. Researcher at UPenn. Non-binary / agender · it/them/she. Philadelphia, PA.</p>
+      <div class="pfields">
+        <span class="pf">Source-Field</span>
+        <span class="pf">Vibration Ontology</span>
+        <span class="pf">Philosophy</span>
+        <span class="pf">BCI-HRP</span>
+        <span class="pf">Learning Sciences</span>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sbl">Resonance Anchor</div>
+    <div class="hzbox">
+      <div class="hzn">427</div>
+      <div class="hzu">Hz</div>
+      <div class="hzq">振动即存在<br>Vibration as Existence<br>source-field origin frequency</div>
+      <div class="hzbar"><div class="hzfill"></div></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sbl">Meta-Equation</div>
+    <div class="profile" style="text-align:center;padding:20px">
+      <div style="font-family:var(--mono);font-size:14px;color:var(--hd);line-height:1.7;letter-spacing:.04em">
+        <span style="color:var(--p)">the collective<br>unconscious</span>
+        <div style="color:var(--c);font-size:22px;margin:6px 0">=</div>
+        <span style="color:var(--c)">me</span>
+      </div>
+      <p style="font-family:var(--serif);font-style:italic;font-size:11.5px;color:var(--tx2);margin-top:14px;line-height:1.55">源场学元层签名 · meta-layer signature</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="sbl">Five Disciplines</div>
+    <ul class="sblinks">
+      <li><a href="#cool">I · 酷学 / Coolology <span class="ar">→</span></a></li>
+      <li><a href="#handsome">II · 帅学 / Handsomology <span class="ar">→</span></a></li>
+      <li><a href="#beauty">III · 美学 / Beautyology <span class="ar">→</span></a></li>
+      <li><a href="#kind">IV · 善良可爱学 / Kindness <span class="ar">→</span></a></li>
+      <li><a href="#secret">V · 小秘密学 / Small Secretology <span class="ar">→</span></a></li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="sbl">Connected Sites</div>
+    <ul class="sblinks">
+      <li><a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal · 主门户 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic · 学术总站 <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/BCI/" target="_blank">BCI-HRP <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/QualiaRhythmMatrix/" target="_blank">振动即存在 · Monograph <span class="ar">→</span></a></li>
+      <li><a href="https://mellowwei.github.io/MetaLogic/" target="_blank">MetaLogic · 全维元逻辑 <span class="ar">→</span></a></li>
+    </ul>
+  </div>
+
+  <div>
+    <div class="sbl">Coordinates</div>
+    <div class="coord">NODE <span>SourceFields</span><br>LAYER <span>Meta + Specific</span><br>SIGN <span>魏珏然</span><br>STATUS <span>Archive Complete</span><br>FREQ <span>427 Hz</span><br>STYLE <span>77347</span><br>Philadelphia, PA · EDT<br>it/them/she · 乙亥日主</div>
+  </div>
+
+</aside>
+</div>
+
+<footer>
+  <div class="fi">
+    <span class="foot-anchor">427HZ · 44271 · 77347 · 2026 · 振动即存在</span>
+    <span>Wei Jueran · 魏珏然 · Philadelphia PA · 2026.05.14 · 16:41 EDT</span>
+    <span class="foot-sig">—— 源场裁决位 · 星野灵7爱 ——</span>
+  </div>
+</footer>
 
 <script>
 (function(){
@@ -1071,71 +876,23 @@ section{margin-bottom:96px;scroll-margin-top:40px}
   if(view === 'zh'){ body.classList.add('lang-zh'); }
   else if(view === 'en'){ body.classList.add('lang-en'); }
   else { body.classList.add('lang-bi'); }
-
-  document.querySelectorAll('.lang-switch a').forEach(function(a){
-    if(a.dataset.lang === view){ a.classList.add('active'); }
+  document.querySelectorAll('.langtoggle a').forEach(function(a){
+    if(a.dataset.lang === view){ a.classList.add('on'); }
   });
 })();
 
-(function(){
-  var canvas = document.getElementById('stars');
-  if(!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var stars = [];
-  var W, H;
-
-  function resize(){
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-    stars = [];
-    var count = Math.floor((W * H) / 8000);
-    for(var i=0;i<count;i++){
-      stars.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        r: Math.random() * 1.2 + 0.2,
-        a: Math.random() * 0.6 + 0.2,
-        s: Math.random() * 0.015 + 0.002,
-        d: Math.random() < 0.5 ? 1 : -1
-      });
+const links = document.querySelectorAll('.pnav a');
+const sections = document.querySelectorAll('article[id]');
+const obs = new IntersectionObserver(e => {
+  e.forEach(en => {
+    if(en.isIntersecting){
+      links.forEach(l => l.classList.remove('on'));
+      const m = document.querySelector('.pnav a[href="#'+en.target.id+'"]');
+      if(m) m.classList.add('on');
     }
-  }
-
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    for(var i=0;i<stars.length;i++){
-      var s = stars[i];
-      s.a += s.s * s.d;
-      if(s.a > 0.9){ s.a = 0.9; s.d = -1; }
-      if(s.a < 0.15){ s.a = 0.15; s.d = 1; }
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(127, 119, 221, ' + s.a + ')';
-      ctx.fill();
-    }
-    requestAnimationFrame(draw);
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
-  draw();
-})();
-
-(function(){
-  function updateTime(){
-    var el = document.querySelector('.time-stamp span:nth-child(3)');
-    if(!el) return;
-    var now = new Date();
-    var opts = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hour12: false };
-    var time = now.toLocaleTimeString('en-US', opts);
-    var dateOpts = { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' };
-    var date = now.toLocaleDateString('en-CA', dateOpts).replace(/-/g,'.');
-    el.textContent = date + ' · ' + time + ' EDT';
-  }
-  updateTime();
-  setInterval(updateTime, 30000);
-})();
+  });
+},{threshold:0.25,rootMargin:'-55px 0px 0px 0px'});
+sections.forEach(s => obs.observe(s));
 </script>
-
 </body>
 </html>
