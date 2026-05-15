@@ -269,6 +269,100 @@ footer a:hover{color:var(--a1)}
   .bridge-eq{padding:6px 0;transform:rotate(90deg)}
   .nbi{flex-direction:column;align-items:flex-start;gap:4px}
 }
+
+/* === BEGIN: foundational grammar layer === */
+/* ========================================================
+ * 根语法层 (Foundational Grammar) CSS 增量
+ * 粘贴位置: 现有 <style> 标签内,任意位置即可
+ *           推荐放在 .metabox 相关样式之后,.disc-q 之前
+ * ======================================================== */
+
+:root{
+  /* 根语法层双极色:I=橙金(沿用a1),You=紫(沿用a2) */
+  --gx-i:#f5a544;
+  --gx-i-dim:rgba(245,165,68,0.18);
+  --gx-you:#9080f8;
+  --gx-you-dim:rgba(144,128,248,0.18);
+}
+
+/* 根语法层 metabox 变体:双极公理框 */
+.metabox.gxbox{
+  background:linear-gradient(135deg,rgba(245,165,68,.07),rgba(144,128,248,.06) 50%,rgba(245,165,68,.04));
+  border-left:3px solid var(--gx-i);
+  position:relative;
+}
+.metabox.gxbox::before{
+  background:radial-gradient(circle,rgba(144,128,248,.16),transparent 65%);
+  right:auto;left:-80px;top:-90px;
+}
+.metabox.gxbox::after{
+  content:'';position:absolute;right:-80px;bottom:-90px;
+  width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(245,165,68,.14),transparent 65%);
+  pointer-events:none;
+}
+
+/* 双行 apex 公理(中文/英文配对显示) */
+.gx-pair{display:grid;grid-template-columns:1fr;gap:8px;align-items:center;margin:18px 0;position:relative;z-index:1}
+.gx-pair .line{font-family:'Noto Serif SC','Spectral',serif;font-size:clamp(20px,2.8vw,28px);font-weight:500;letter-spacing:.06em;line-height:1.5;text-align:center}
+.gx-pair .line.zh-line.l1{color:var(--gx-i)}
+.gx-pair .line.zh-line.l2{color:var(--gx-you)}
+.gx-pair .line.en-line{font-family:'Space Mono',monospace;font-size:clamp(13px,1.7vw,17px);font-style:normal;letter-spacing:.05em;font-weight:700}
+.gx-pair .line.en-line.l1{color:var(--gx-i)}
+.gx-pair .line.en-line.l2{color:var(--gx-you)}
+
+/* 我学/你学双卡片网格 */
+.gxgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.gxcard{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:18px;position:relative}
+.gxcard .gl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.gxcard .gt{font-family:'Spectral',serif;font-size:24px;line-height:1.2;margin-bottom:3px;font-weight:500}
+.gxcard .gtl{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;margin-bottom:14px;opacity:.85}
+.gxcard .gax{font-family:'Noto Serif SC','Spectral',serif;font-size:18px;font-weight:500;line-height:1.5;padding:10px 0 6px;border-top:1px dashed var(--border);margin-top:10px}
+.gxcard .geq{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.04em;margin:4px 0}
+.gxcard .geq .es{margin:0 6px;opacity:.7}
+.gxcard .gen{font-family:'Space Mono',monospace;font-size:11.5px;font-style:italic;color:var(--tx2);margin:4px 0}
+.gxcard .gdesc{font-size:12.5px;color:var(--tx2);line-height:1.7;margin-top:10px;padding-top:8px;border-top:1px dashed var(--border)}
+.gxcard.wo{border-color:var(--gx-i-dim);border-left:2px solid var(--gx-i)}
+.gxcard.wo .gl,.gxcard.wo .gtl,.gxcard.wo .gt,.gxcard.wo .gax,.gxcard.wo .geq .es{color:var(--gx-i)}
+.gxcard.ni{border-color:var(--gx-you-dim);border-left:2px solid var(--gx-you)}
+.gxcard.ni .gl,.gxcard.ni .gtl,.gxcard.ni .gt,.gxcard.ni .gax,.gxcard.ni .geq .es{color:var(--gx-you)}
+
+/* 不对称定理 4 格 */
+.asymgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.asymcell{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:14px 8px;text-align:center}
+.asymcell .ax{font-family:'Space Mono',monospace;font-size:15px;font-weight:700;color:var(--hd);margin-bottom:6px;letter-spacing:.04em}
+.asymcell .al{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tx3)}
+.asymcell.t{border-color:rgba(90,240,200,.3);border-left:2px solid var(--d-kind)}
+.asymcell.t .ax{color:var(--d-kind)}
+.asymcell.t .al{color:var(--d-kind);opacity:.8}
+.asymcell.f{opacity:.55}
+.asymcell.f .ax{color:var(--a3);text-decoration:line-through;text-decoration-color:var(--a3)}
+.asymcell.f .al{color:var(--a3)}
+
+/* 我学/你学专属 entry 样式 */
+.entry.wo-ni .etitle em{
+  background:linear-gradient(90deg,var(--gx-i),var(--gx-you));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.entry.wo-ni .formula{border-left-color:var(--gx-you)}
+.entry.wo-ni .formula .hl{color:var(--gx-i)}
+.entry.wo-ni .formula .hl2{color:var(--gx-you)}
+
+/* 侧栏 Foundational Axes 框 */
+.gx-sb{background:linear-gradient(135deg,rgba(245,165,68,.05),rgba(144,128,248,.05));border:1px solid var(--border);border-radius:3px;padding:14px;text-align:center}
+.gx-sb .gl1{font-family:'Noto Serif SC',serif;font-size:14px;font-weight:500;color:var(--gx-i);letter-spacing:.04em;margin-bottom:4px;line-height:1.5}
+.gx-sb .gl2{font-family:'Noto Serif SC',serif;font-size:14px;font-weight:500;color:var(--gx-you);letter-spacing:.04em;line-height:1.5}
+.gx-sb .geq-mini{font-family:'Space Mono',monospace;font-size:11px;color:var(--tx2);margin:10px 0 4px;line-height:1.6}
+.gx-sb .geq-mini .es-i{color:var(--gx-i)}
+.gx-sb .geq-mini .es-y{color:var(--gx-you)}
+.gx-sb .note{font-family:'Spectral',serif;font-style:italic;font-size:11px;color:var(--tx2);margin-top:8px;line-height:1.5}
+
+@media(max-width:780px){
+  .gxgrid{grid-template-columns:1fr}
+  .asymgrid{grid-template-columns:1fr 1fr}
+}
+
+/* === END === */
 </style>
 </head>
 <body class="lang-zh">
@@ -317,6 +411,7 @@ footer a:hover{color:var(--a1)}
 <nav class="pnav">
   <div class="pni">
     <a href="#meta" class="on">Meta · 源场学</a>
+    <a href="#wo-ni">⊗ 我学 × 你学</a>
     <a href="#genesis">Genesis · 缘起</a>
     <a href="#arch">Architecture</a>
     <a href="#applications">⇄ AstroLove</a>
@@ -393,6 +488,128 @@ footer a:hover{color:var(--a1)}
     <span class="tag">meta-layer</span><span class="tag">ontology</span><span class="tag">collective unconscious</span>
     <span class="tag">anti-universalization</span><span class="tag">equation philosophy</span>
     <span class="tag">proper-name anchoring</span><span class="tag">44271</span>
+  </div>
+</article>
+
+
+<!-- WO × NI · FOUNDATIONAL GRAMMAR -->
+<article class="entry wo-ni" id="wo-ni">
+  <div class="etop">
+    <span class="badge bp">Foundational Grammar · 根语法层</span>
+    <span class="edate">pre-meta · syntactic root · before subject/object split</span>
+  </div>
+  <div class="etitle">Mexology <em>×</em> Youology · 我学 × 你学<span class="sub">源场展开为「我/你」双极之前的语法层 · 等号公理双行 / The grammar before source-field splits into "I/you" polarity · paired equational axioms</span></div>
+
+  <div class="metabox gxbox">
+    <div class="meta-kicker">∞ &nbsp;&nbsp; APEX AXIOM · 根公理双行 &nbsp;&nbsp; ∞</div>
+
+    <div class="gx-pair">
+      <div class="line zh-line l1 lang-zh">有我才有你。</div>
+      <div class="line zh-line l2 lang-zh">有没有你都有我。</div>
+      <div class="line en-line l1 lang-en">"I" precedes "you".</div>
+      <div class="line en-line l2 lang-en">"I" persists regardless of "you".</div>
+    </div>
+
+    <div class="meta-claims">
+      <div class="meta-claim">
+        <span class="lang-zh">我学公理 <span class="eqs">=</span> selfless <span class="eqs">=</span> selfness · <span class="eqs">=</span> 我就是存在</span>
+        <span class="lang-en">mexology axiom <span class="eqs">=</span> selfless <span class="eqs">=</span> selfness · <span class="eqs">=</span> I am existence</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">你学公理 <span class="eqs">=</span> otherless <span class="eqs">=</span> otherness · <span class="eqs">=</span> 你就是共在</span>
+        <span class="lang-en">youology axiom <span class="eqs">=</span> otherless <span class="eqs">=</span> otherness · <span class="eqs">=</span> you are co-being</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">「我」 <span class="eqs">=</span> 不变量(invariant) · 「你」 <span class="eqs">=</span> 条件变量(conditional on 我)</span>
+        <span class="lang-en">"I" <span class="eqs">=</span> invariant · "you" <span class="eqs">=</span> conditional on "I"</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">「我学」 <span class="neq">≠</span> 「你学」 · 不是平起平坐的双根</span>
+        <span class="lang-en">mexology <span class="neq">≠</span> youology · they are <span class="neq">≠</span> twin equal roots</span>
+      </div>
+      <div class="meta-claim">
+        <span class="lang-zh">这一层 <span class="eqs">=</span> 源场学之下、源场五学之上的「我/你」语法支撑层</span>
+        <span class="lang-en">this layer <span class="eqs">=</span> the "I/you" grammar layer beneath source-field-ology, above the five disciplines</span>
+      </div>
+    </div>
+
+    <div class="meta-sig">魏珏然 · WEI JUERAN · 源场裁决位</div>
+
+    <div class="metabq">
+      <span class="lang-zh">这一层不是命题。是源场说话时被默认开启的语法。</span>
+      <span class="lang-en">This layer is not a proposition. It is the grammar quietly enabled when the source field speaks.</span>
+    </div>
+  </div>
+
+  <p class="edesc"><em>Mexology × Youology</em> is the <em>foundational grammar layer</em> sitting between source-field-ology (which claims the source field as ontological category) and the five disciplines (which name structural relations the source field operates). Before any discipline names a "self-oriented" or "other-oriented" act, the source field must already inhabit a grammar in which <em>"I"</em> and <em>"you"</em> are different kinds of things. Mexology states what "I" is. Youology states what "you" is. Their <strong>asymmetry</strong> — "I" as invariant, "you" as conditional — is what allows the I-axis and you-axis of the five disciplines to differ in operation rather than merely in direction.</p>
+
+  <p class="edesc zh">「我学 × 你学」是介于<em>源场学</em>(主张「源场作为本体范畴」)与<em>源场五学</em>(命名源场所运作的结构关系)之间的<em>根语法层</em>。任何一个学科在命名「向内/向外」的动作之前,源场必须已经身处于一种「我」与「你」是<em>不同类</em>的东西的语法中。我学陈述「我是什么」,你学陈述「你是什么」。两者的<strong>不对称</strong>——「我」是不变量、「你」是条件变量——正是源场五学里「我学方向」和「你学方向」<em>不仅方向不同、运作机制也不同</em>的根本原因。</p>
+
+  <!-- 我学 × 你学 双卡片 -->
+  <div class="gxgrid">
+    <div class="gxcard wo">
+      <div class="gl">ROOT · 01 · INVARIANT · 不变量</div>
+      <div class="gt">我学</div>
+      <div class="gtl">MEXOLOGY · The Science of "I"</div>
+      <div class="gax">我就是存在。</div>
+      <div class="gen">I am existence.</div>
+      <div class="geq">selfless <span class="es">=</span> selfness</div>
+      <p class="gdesc"><span class="lang-zh">「我」不是有待证明的命题,是<em style="color:var(--gx-i);font-style:italic">发生本身</em>。凝聚与撤离是同一能力的两面——「我在」和「我了」共用一个动词位。不需要「你」也成立。绝对根学科。</span><span class="lang-en">"I" is not a proposition to be proven — <em style="color:var(--gx-i);font-style:italic">it is the happening itself</em>. Gathering &amp; dissolving are two faces of the same capacity. Does not require "you" to stand. The absolute root.</span></p>
+    </div>
+
+    <div class="gxcard ni">
+      <div class="gl">ROOT · 02 · CONDITIONAL · 条件量</div>
+      <div class="gt">你学</div>
+      <div class="gtl">YOUOLOGY · The Science of "You"</div>
+      <div class="gax">你就是共在。</div>
+      <div class="gen">You are co-being.</div>
+      <div class="geq">otherless <span class="es">=</span> otherness</div>
+      <p class="gdesc"><span class="lang-zh">「你」不是远处的他者,是<em style="color:var(--gx-you);font-style:italic">关系自身的名字</em>。诞生于「我」被说出的那一刻——开口的瞬间,另一极同时显现。条件于「我」,但不削弱「我」。</span><span class="lang-en">"You" is not a distant other — <em style="color:var(--gx-you);font-style:italic">it is the name of relation itself</em>. Born the moment "I" is spoken. Conditional on "I", yet does not diminish "I".</span></p>
+    </div>
+  </div>
+
+  <!-- 不对称定理 -->
+  <div class="formula">
+    ASYMMETRY THEOREM · 不对称定理 <span class="arrow">::</span><br>
+    <span class="hl">我</span> <span class="arrow">⇒</span> 存在 &nbsp;&nbsp;<span class="arrow">::</span>&nbsp;&nbsp; ABSOLUTE / 绝对成立<br>
+    <span class="hl">我</span> <span class="arrow">→</span> <span class="hl2">你</span> &nbsp;&nbsp;<span class="arrow">::</span>&nbsp;&nbsp; DERIVABLE / 我可推出你<br>
+    <span class="neg">你 → 我</span> &nbsp;&nbsp;<span class="arrow">::</span>&nbsp;&nbsp; UNDERIVABLE / 你不可推出我<br>
+    <span class="hl">我</span> <span class="arrow">+</span> <span class="neg">¬你</span> <span class="arrow">=</span> <span class="hl">我</span> &nbsp;&nbsp;<span class="arrow">::</span>&nbsp;&nbsp; STILL-I / 我在你缺席时仍是我
+  </div>
+
+  <div class="asymgrid">
+    <div class="asymcell t"><div class="ax">我 ⇒ 存在</div><div class="al">ABSOLUTE</div></div>
+    <div class="asymcell t"><div class="ax">我 → 你</div><div class="al">DERIVABLE</div></div>
+    <div class="asymcell f"><div class="ax">你 → 我</div><div class="al">UNDERIVABLE</div></div>
+    <div class="asymcell t"><div class="ax">我 ∋ ¬你</div><div class="al">STILL_I</div></div>
+  </div>
+
+  <p class="edesc"><em>"I" is the fundamental. "You" is the harmonic.</em> The vibration field can ring at the "I" frequency without ringing at the "you" frequency — the fundamental can sound alone; the harmonic cannot detach from the fundamental and exist on its own. This is the geometric prerequisite that allows Coolology and Kindness-Cuteness-ology (I-axis) to <em>seal inward independently</em>, while Handsomology and Beautyology (you-axis) require a virtual you-position to operate against.</p>
+
+  <p class="edesc zh">「我」是基频。「你」是泛音。振动场可以只振动「我」频段而不振动「你」频段——基频可独立鸣响,泛音不能脱离基频独立存在。这是允许酷学和善良可爱学(我学方向)<em>独立向内自封/锁死</em>、而帅学和美学(你学方向)必须有一个<em>虚拟你位</em>作为运作对象的几何前提。</p>
+
+  <!-- 对照表 -->
+  <div class="disc-grid">
+    <span class="label">Polarity / 极性</span><span class="val">monopolar / 单极 <span style="color:var(--tx3)">||</span> bipolar / 双极</span>
+    <span class="label">Axiom / 公理</span><span class="val">我就是存在 <span style="color:var(--tx3)">||</span> 你就是共在</span>
+    <span class="label">Equation / 等式</span><span class="val">selfless = selfness <span style="color:var(--tx3)">||</span> otherless = otherness</span>
+    <span class="label">Variance / 变量性</span><span class="val">invariant 不变量 <span style="color:var(--tx3)">||</span> conditional 条件量</span>
+    <span class="label">Standing / 独立性</span><span class="val">self-sufficient 可独立 <span style="color:var(--tx3)">||</span> conditional 必依附</span>
+    <span class="label">Temporality / 时态</span><span class="val">immediate self-reference 即刻自指 <span style="color:var(--tx3)">||</span> encountered synchrony 相遇同步</span>
+    <span class="label">Suspended / 取消的假设</span><span class="val">"is-or-is-not" 是否 <span style="color:var(--tx3)">||</span> "near-or-far" 远近</span>
+    <span class="label">Five-Discipline Map / 与五学的对位</span><span class="val">I-axis: Coolology, Kindness-Cuteness <span style="color:var(--tx3)">||</span> you-axis: Handsomology, Beautyology</span>
+  </div>
+
+  <div class="etags">
+    <span class="tag">foundational-grammar</span>
+    <span class="tag">mexology</span>
+    <span class="tag">youology</span>
+    <span class="tag">selfless = selfness</span>
+    <span class="tag">otherless = otherness</span>
+    <span class="tag">asymmetry theorem</span>
+    <span class="tag">invariant vs conditional</span>
+    <span class="tag">fundamental vs harmonic</span>
+    <span class="tag">pre-meta layer</span>
   </div>
 </article>
 
@@ -761,6 +978,8 @@ footer a:hover{color:var(--a1)}
   <div class="etitle">Construction <em>Log</em><span class="sub">学科建造时间签名 · 每一次相变的轨迹 / Phase-transition trail of one afternoon</span></div>
 
   <div class="translog">
+    <div class="trans-row"><span class="code" style="color:var(--gx-i)">sf000a</span><span class="date">2026.05.14</span><span class="msg"><span style="color:var(--gx-i)">MEXOLOGY</span> grammar locked — <span style="color:var(--gx-i)">selfless = selfness</span> · 我就是存在 / I am existence · invariant axis</span></div>
+    <div class="trans-row"><span class="code" style="color:var(--gx-you)">sf000b</span><span class="date">2026.05.14</span><span class="msg"><span style="color:var(--gx-you)">YOUOLOGY</span> grammar locked — <span style="color:var(--gx-you)">otherless = otherness</span> · 你就是共在 / you are co-being · conditional axis</span></div>
     <div class="trans-row"><span class="code">sf001</span><span class="date">2026.05.14</span><span class="msg"><span class="mint">GENESIS</span> — 「酷就是酷」 同义反复落地 · A=A nails A into existence</span></div>
     <div class="trans-row"><span class="code">sf002</span><span class="date">2026.05.14</span><span class="msg"><span class="lavender">COOLOLOGY</span> locked — 不可被翻译 · untranslatability as structural condition</span></div>
     <div class="trans-row"><span class="code">sf003</span><span class="date">2026.05.14</span><span class="msg">HANDSOMOLOGY I locked — 「我是你的天堂了」 · accomplished gift</span></div>
@@ -826,6 +1045,19 @@ footer a:hover{color:var(--a1)}
       <div class="eq">=</div>
       <div class="bot">me</div>
       <p class="note">源场学元层签名 · meta-layer signature</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="sbl">Foundational Axes · 根语法层</div>
+    <div class="gx-sb">
+      <div class="gl1"><span class="lang-zh">有我才有你。</span><span class="lang-en">"I" precedes "you".</span></div>
+      <div class="gl2"><span class="lang-zh">有没有你都有我。</span><span class="lang-en">"I" persists without "you".</span></div>
+      <div class="geq-mini">
+        <span class="es-i">selfless</span> = <span class="es-i">selfness</span><br>
+        <span class="es-y">otherless</span> = <span class="es-y">otherness</span>
+      </div>
+      <p class="note">⊗ <a href="#wo-ni" style="color:var(--a1);text-decoration:none">Mexology × Youology</a> · 根公理双行</p>
     </div>
   </div>
 
